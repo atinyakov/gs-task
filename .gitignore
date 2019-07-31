@@ -64,7 +64,6 @@ sftp-config.json
 # Project #
 ###########
 /vendor/
-build/
 node_modules/
 bower_components/
 app/local/modules/sprint.options
