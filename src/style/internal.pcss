@@ -1,0 +1,75 @@
+@import 'partials/partials.pcss';
+
+.browse-happy {
+    background: #fff;
+    padding: 20px 0;
+    text-align: center;
+
+    strong {
+        color: red;
+    }
+
+    &__notice {
+        font-size: 20px;
+    }
+
+    &__security {
+        font-size: 12px;
+    }
+
+    &__update {
+        font-size: 14px;
+    }
+
+    &__recommend {
+        font-size: 12px;
+    }
+}
+
+.wrap-main {
+    position: relative;
+    min-width: $mobile-sm-size-min;
+    margin: 0 auto;
+    @include clearfix;
+
+}
+
+    .container {
+        position: relative;
+        min-width: $mobile-sm-size-min;
+        margin: 0 auto;
+        padding: 0 calc($gutter * 1.5);
+
+        @include clearfix;
+
+        @media (--tablet-lg) {
+            padding: 0 $gutter;
+        }
+
+        @media (--tablet) {
+            padding: 0 calc($gutter / 2);
+        }
+
+        &__inside {
+            position: relative;
+            max-width: $desktop-size;
+            margin: 0 auto;
+            padding: 0;
+            @include clearfix;
+        }
+    }
+
+        .section {
+            position: relative;
+            @include clearfix;
+
+            &__hl {
+                margin: 0 0 $gutter 0;
+                text-align: center;
+            }
+        }
+
+    .rub {
+        font-family: 'ruble';
+        line-height: 1;
+    }

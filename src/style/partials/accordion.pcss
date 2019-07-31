@@ -1,0 +1,23 @@
+/* Стилизация раскрываемых блоков (accordion) */
+
+.ui-accordion {
+    .ui-accordion-icons {
+        padding: 0;
+    }
+
+    .ui-accordion-header {
+        margin: 0;
+        padding: 0;
+
+        &.ui-state-active,
+        &.is-disabled {
+            cursor: default;
+        }
+    }
+
+    .ui-accordion-content {
+        overflow: visible;
+        margin: 0;
+        padding: 0;
+    }
+}

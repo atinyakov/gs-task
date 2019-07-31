@@ -1,0 +1,214 @@
+/**
+ * Стили для красивой страницы ui kit
+ * Это стили только для оформления самой статичной страницы, это НЕ стили базовых элементов сайта
+ * В прод сборку не попадают
+ */
+
+ @import 'partials/grid_settings.pcss';
+ @import 'partials/variables.pcss';
+
+.ui-kit-main {
+    counter-reset: uiSectionCounter;
+}
+
+.ui-kit-section {
+    padding: $gutter 0;
+
+    &__hl {
+        margin: 0 0 calc($gutter * 2) 0;
+        font-size: 32px;
+        font-weight: bold;
+    }
+
+        &__hl-num {
+            float: right;
+            position: relative;
+            display: inline-block;
+
+            &:before {
+                counter-increment: uiSectionCounter;
+                content:  '\2014 ' counter(uiSectionCounter);
+                display: inline-block;
+                position: absolute;
+                right: 0;
+            }
+        }
+
+    &__desc {
+        opacity: .6;
+
+        .ui-kit-section__hl + & {
+            margin: -$gutter 0 calc($gutter * 2) 0;
+        }
+    }
+}
+
+
+.ui-kit-grid {
+    display: flex;
+    flex-wrap: nowrap;
+
+    &__col {
+        background: $cl-global;
+        lost-column: 1/12;
+        height: 100px;
+        opacity: .5;
+    }
+}
+
+.ui-kit-colors {
+    display: flex;
+    flex-wrap: nowrap;
+
+    &__col {
+        border: 1px solid $cl-global;
+        lost-column: 1/12;
+        height: 50px;
+        font-size: 11px;
+        line-height: 50px;
+        text-align: center;
+
+        &:nth-child(1) {
+            background: $cl-global-invert;
+            color: $cl-global;
+        }
+
+        &:nth-child(2) {
+            background: $cl-lg-grey;
+            color: $cl-global;
+        }
+
+        &:nth-child(3) {
+            background: $cl-grey;
+        }
+
+        &:nth-child(4) {
+            background: $cl-dk-grey;
+        }
+
+        &:nth-child(5) {
+            background: $cl-red;
+        }
+
+        &:nth-child(6) {
+            background: $cl-green;
+            color: $cl-global;
+        }
+    }
+}
+
+.ui-kit-cols {
+    display: flex;
+    position: relative;
+
+    &__col {
+        lost-column: 1/2;
+    }
+}
+
+.ui-kit-desc {
+    font-size: 11px;
+    opacity: .6;
+}
+
+.ui-kit-sidebar {
+    background: rgba(#000, 0.5);
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10000;
+
+    &.is-visible {
+        display: block;
+    }
+
+    &-open {
+        background: #ccc;
+        box-shadow: 0 0 10px rgba(#000, 0.3);
+        position: fixed;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: calc($gutter-step * 4);
+        height: calc($gutter-step * 4);
+        font-size: 0;
+        line-height: 0;
+        cursor: pointer;
+        z-index: 9999;
+
+        span {
+            background: #000;
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: calc($gutter-step * 2);
+            height: calc($gutter-step / 2);
+            text-indent: -9999px;
+
+            &::before,
+            &::after {
+                content: '';
+                background: #000;
+                display: inline-block;
+                position: absolute;
+                left: 0;
+                width: calc($gutter-step * 2);
+                height: calc($gutter-step / 2);
+            }
+
+            &::before {
+                top: -$gutter-step;
+            }
+
+            &::after {
+                bottom: -$gutter-step;
+            }
+        }
+    }
+
+    &__content {
+        background: #fff;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 300px;
+        padding: calc($gutter-step * 2);
+    }
+
+        &__hl {
+            margin-bottom: calc($gutter-step * 3);
+            font-weight: bold;
+            line-height: 1;
+        }
+
+        &__scroll {
+            overflow-x: hidden;
+            overflow: auto;
+            position: absolute;
+            top: calc($gutter-step * 7);
+            right: calc($gutter-step * 2);
+            bottom: calc($gutter-step * 2);
+            left: calc($gutter-step * 2);
+        }
+
+        &__close {
+            position: absolute;
+            top: calc($gutter-step * 2);
+            right: calc($gutter-step * 2);
+            width: calc($gutter-step * 2);
+            height: calc($gutter-step * 2);
+            font-size: 0;
+            cursor: pointer;
+
+            .icon {
+                width: calc($gutter-step * 2);
+                height: calc($gutter-step * 2);
+            }
+        }
+}

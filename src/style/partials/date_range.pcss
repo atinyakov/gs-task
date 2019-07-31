@@ -1,0 +1,30 @@
+.date-range {
+    position: relative;
+    @include clearfix;
+    margin-bottom: calc($gutter * 1.5);
+
+    &__fields {
+        position: relative;
+        @include clearfix;
+
+        &:before {
+            content: '';
+            background: $cl-global;
+            border: none;
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: calc($gutter-step * 2);
+            height: 1px;
+            font-size: 0;
+            line-height: 0;
+        }
+    }
+
+    input[type="text"] {
+        lost-column: 1/2;
+        margin-bottom: 0;
+    }
+}

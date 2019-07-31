@@ -1,0 +1,100 @@
+/* Helpers */
+
+/* Display*/
+
+.display-iblock {
+    display: inline-block;
+}
+
+.display-block {
+    display: block;
+}
+
+/* Float */
+
+.pull-left {
+    float: left !important;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+.pull-no {
+    float: none !important;
+}
+
+/* Clear */
+
+.clearfix {
+    @include clearfix;
+}
+
+.clear-no { clear: none !important; }
+
+.clear {
+    clear: both;
+    height: 1px;
+    line-height: 1px;
+    overflow: hidden;
+    margin-top: -1px;
+}
+
+/* Text-align */
+
+.text {
+    &-c { text-align: center !important; }
+
+    &-l { text-align: left !important; }
+
+    &-r { text-align: right !important; }
+}
+
+/* Размеры шрифта */
+
+.fz {
+    &-10 { font-size: 10px; }
+
+    &-11 { font-size: 11px; }
+
+    &-12 { font-size: 12px; }
+
+    &-13 { font-size: 13px; }
+
+    &-14 { font-size: 14px; }
+
+    &-16 { font-size: 16px; }
+
+    &-18 { font-size: 18px; }
+}
+
+/* Разные варианты text-decoration + подчеркивание dotted */
+
+.text-dec {
+
+    &-no,
+    &-no:hover,
+    &-und-h,
+    &-no-h:hover {
+        text-decoration: none;
+    }
+
+    &-und,
+    &-und:hover,
+    &-und-h:hover,
+    &-no-h {
+        text-decoration: underline;
+    }
+
+    &-dot {
+        border-bottom: 1px dotted $cl-blue;
+        text-decoration: none;
+    }
+
+    &-dot:hover,
+    a:hover &-dot,
+    button:hover &-dot {
+        border-color: $cl-dk-blue;
+        text-decoration: none;
+    }
+}

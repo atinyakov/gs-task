@@ -1,0 +1,41 @@
+.tabs {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    @include clearfix;
+    
+    &__item {
+        display: inline;
+        list-style: none outside;
+        padding: 0;
+
+        &:last-child {
+            .tabs__link {
+                margin-right: 0;
+            }
+        }
+    }
+
+        &__link {
+            border-bottom: 1px solid transparent;
+            display: inline-block;
+            margin: 0 $gutter calc($gutter / 2) 0;
+            cursor: pointer;
+            transition: all $time ease;
+
+            &.is-active {
+                text-decoration: underline;
+                cursor: default;
+            }
+        }
+
+    &__cnt {
+        display: none;
+        float: left;
+        width: 100%;
+
+        &.is-open {
+            display: block;
+        }
+    }
+}

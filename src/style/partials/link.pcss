@@ -1,0 +1,133 @@
+.link {
+    display: inline-block;
+    position: relative;
+    color: $cl-blue;
+    fill: $cl-blue;
+    line-height: 1.2;
+    cursor: pointer;
+    transition: all $time ease;
+
+    &:hover {
+        border-color: $cl-dk-blue;
+        color: $cl-dk-blue;
+        fill: $cl-dk-blue;
+    }
+
+    &--black {
+        border-color: $cl-global;
+        color: $cl-global;
+        fill: $cl-global;
+
+        &:hover {
+            border-color: $cl-blue;
+            color: $cl-blue;
+            fill: $cl-blue;
+        }
+    }
+
+    &--grey {
+        border-color: $cl-dk-grey;
+        color: $cl-dk-grey;
+        fill: $cl-dk-grey;
+
+        &:hover {
+            border-color: $cl-blue;
+            color: $cl-blue;
+            fill: $cl-blue;
+        }
+    }
+
+    &--line {
+        border-bottom: 1px solid $cl-blue;
+
+        &:hover {
+            border-color: $cl-dk-blue;
+            text-decoration: none;
+
+            .link__line {
+                border-color: $cl-dk-blue;
+            }
+        }
+    }
+
+        &__line {
+            border-bottom: 1px solid $cl-blue;
+            display: inline-block;
+            position: relative;
+            line-height: 1.2;
+        }
+
+    &--line-hover {
+        &:hover {
+            border-color: $cl-dk-blue;
+            text-decoration: none;
+
+            .link__line-hover {
+                border-color: $cl-dk-blue;
+            }
+        }
+    }
+
+        &__line-hover {
+            border-bottom: 1px solid transparent;
+            display: inline-block;
+            position: relative;
+            line-height: 1.2;
+        }
+
+    &--dotted {
+        border-bottom: 1px dotted $cl-blue;
+
+        &:hover {
+            border-color: $cl-dk-blue;
+            text-decoration: none;
+
+            .link__dotted {
+                border-color: $cl-dk-blue;
+            }
+        }
+    }
+
+        &__dotted {
+            border-bottom: 1px dotted $cl-blue;
+            display: inline-block;
+            position: relative;
+            line-height: 1.2;
+        }
+
+    &--icon {
+        border-color: transparent;
+
+        &:hover {
+            border-color: transparent;
+        }
+    }
+
+    &[disabled],
+    &.is-disabled,
+    .is-disabled &,
+    &[disabled]:hover,
+    &.is-disabled:hover,
+    .is-disabled &:hover {
+        border-color: rgba($cl-grey, 0.5);
+        color: rgba($cl-grey, 0.5);
+        fill: rgba($cl-grey, 0.5);
+        cursor: default;
+
+        &.link--icon {
+            border-color: transparent;
+        }
+
+        .link__dotted,
+        .link__line {
+            border-color: rgba($cl-grey, 0.5);
+        }
+    }
+
+    &__hidden-text {
+        text-align: left;
+        text-indent: -9999px;
+        font-size: 0;
+        line-height: 0;
+    }
+}

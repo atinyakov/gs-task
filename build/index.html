@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie8" lang="ru-RU" prefix="og: http://ogp.me/ns#"><![endif]-->
+<!--[if IE 9 ]><html class="ie9" lang="ru-RU" prefix="og: http://ogp.me/ns#"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="ru-RU" prefix="og: http://ogp.me/ns#"><!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="skype_toolbar" content="skype_toolbar_parser_compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png"> -->
+    <title>Blank</title>
+
+    <link href="css/external.css" rel="stylesheet">
+    <link href="css/internal.css" rel="stylesheet">
+
+    <!-- При интеграции файл ui_kit.css НЕ подключать -->
+    <link href="css/ui_kit.css" rel="stylesheet">
+
+    <!-- jquery подключаем в шапке т.к. какой-то js может быть внутри компонентов -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <!-- Для ie10 -->
+    <!--[if !IE]><!--><script>if(/*@cc_on!@*/false){document.documentElement.className+=' ie10';}</script><!--<![endif]-->
+</head>
+
+<body>
+    <!--[if lt IE 10]>
+    <div class="browse-happy">
+        <div class="container">
+            <p class="browse-happy__notice">Мы обнаружили, что вы используете <strong>устаревшую версию</strong> браузера Internet Explorer</p>
+            <p class="browse-happy__security">Из соображений безопасности этот сайт поддерживает Internet Explorer версии 10 и выше
+                <br>Кроме того, этот и многие другие сайты могут отображаться <strong>некорректно</strong></p>
+            <p class="browse-happy__update">Пожалуйста, обновите свой браузер по этой <a href="http://browsehappy.com/" target="_blank">ссылке</a></p>
+            <p class="browse-happy__recommend">(мы рекомендуем <a href="http://www.google.com/chrome" target="_blank">Google Chrome</a>)</p>
+        </div>
+    </div>
+    <![endif]-->
+
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0" style="position:absolute">
+	
+    		<symbol id="icon-balance" viewBox="0 0 24 20.844">
+    			<path fill-rule="evenodd" d="M15.74 9.379a4.139 4.139 0 0 0 7.05 2.89A4.04 4.04 0 0 0 24 9.379a.78.78 0 0 0-.12-.42l-2.59-4.277a.814.814 0 0 0 .51-.753 1.069 1.069 0 0 0-.8-1.085h-8v-2c0-1.114-2-1.114-2 0v2H3a1.069 1.069 0 0 0-.8 1.087.814.814 0 0 0 .51.753L.12 8.961a.782.782 0 0 0-.12.42 4.13 4.13 0 0 0 8.26 0 .782.782 0 0 0-.12-.42L5 4.844h6v14H6c-1.04 0-1.19 2-.16 2h12.32c1.03 0 .88-2-.16-2h-5v-14h6l-3.14 4.117a.782.782 0 0 0-.12.418zM4.13 11.832a2.481 2.481 0 0 1-2.34-1.635h4.67a2.468 2.468 0 0 1-2.33 1.634zm1.84-3.269H2.28l1.85-3.044zm13.9-3.044l1.85 3.044h-3.69zm2.34 4.679a2.492 2.492 0 0 1-4.68 0h4.68z"></path>
+    		</symbol>
+	
+    		<symbol id="icon-cart" viewBox="0 0 23 21">
+    			<path fill-rule="evenodd" d="M18.222 15H5.012L3.191 2H0V0h4.885l.567 4H23zm-11.51-2h10.24l3.038-7H5.735zm1.1 4a2 2 0 1 1-1.954 2 1.978 1.978 0 0 1 1.958-2zm7.817 0a2 2 0 1 1-1.955 2 1.978 1.978 0 0 1 1.959-2z"></path>
+    		</symbol>
+	
+    		<symbol id="icon-cross" viewBox="0 0 27 27">
+    			<path fill-rule="evenodd" d="M26.993 25.483l-1.416 1.415L13.546 14.87 1.515 26.898.1 25.483l12.031-12.028L.1 1.428 1.515.013l12.031 12.028L25.577.013l1.416 1.415-12.031 12.027 12.031 12.028z"></path>
+    		</symbol>
+	
+    		<symbol id="icon-hamburger" viewBox="0 0 36 24">
+    			<path fill-rule="evenodd" d="M0 11h36v2H0v-2zM0 0h36v2H0V0zm0 22h36v2H0v-2z"></path>
+    		</symbol>
+	
+    		<symbol id="icon-load" viewBox="0 0 24 24">
+    			<path d="M23.532 8.68A12.024 12.024 0 0 0 16.553.9a12.086 12.086 0 0 0-4.539-.9v1.47a10.508 10.508 0 0 1 7.451 3.06 10.353 10.353 0 0 1 2.663 4.52 10.471 10.471 0 0 1 .184 5.19 10.275 10.275 0 0 1-2.336 4.64l-2.046-2.01v4.99l5.1.08-2.046-2.04a11.937 11.937 0 0 0 2.548-11.22zM1.86 14.96a10.477 10.477 0 0 1-.171-5.19 10.333 10.333 0 0 1 2.349-4.65l2.046 2.03V2.13l-5.1-.05L3.018 4.1a11.951 11.951 0 0 0 4.433 18.99 11.991 11.991 0 0 0 4.566.91v-1.44a10.609 10.609 0 0 1-10.157-7.6z"></path>
+    		</symbol>
+	
+    		<symbol id="icon-star" viewBox="0 0 23 22">
+    			<path fill-rule="evenodd" d="M23 8.524a.72.72 0 0 0-.77-.638l-6.94-1.011L12.18.569a.691.691 0 0 0-1.36 0L7.71 6.875.77 7.886a.72.72 0 0 0-.77.638 1.046 1.046 0 0 0 .34.665l5.04 4.907-1.19 6.931a2.087 2.087 0 0 0-.03.276.8.8 0 0 0 .15.492.489.489 0 0 0 .43.2 1.132 1.132 0 0 0 .55-.166l6.21-3.272 6.21 3.272a1.078 1.078 0 0 0 .55.166.565.565 0 0 0 .57-.693 1.816 1.816 0 0 0-.02-.277l-1.19-6.93 5.02-4.907a1 1 0 0 0 .36-.664zm-7.28 4.948l.99 5.836-5.21-2.759-5.23 2.759 1.01-5.836-4.23-4.117 5.84-.86L11.5 3.2l2.61 5.295 5.84.86z"></path>
+    		</symbol>
+	
+    </svg>
+
+
+    
+    <header class="header-main">
+        <div class="container">
+            <nav class="menu">
+                <img class="menu__logo" src="img/logo.png" alt="Логотип" width="116" height="36">
+                <ul class="menu__goods">
+                    <li class="menu__item menu__item--mobile">
+                        <a href="#">
+                            <svg width="36" height="24">
+                                <use xlink:href="#icon-hamburger"></use>
+                             </svg>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="">Матрасы</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="">Кровати</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="">Диваны</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="">Подушки</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="">Детские матрасы</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="">Наматрасники</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="">Постельное белье</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="">Одеяла</a>
+                    </li>
+                </ul>
+                <ul class="menu__user">
+                    <li class="menu__user-item menu__user-item--compare">
+                        <a href="#">
+                            <svg width="24" height="21">
+                                <use xlink:href="#icon-balance"></use>
+                            </svg>
+                        </a> 
+                    </li>
+                    <li class="menu__user-item menu__user-item--favorite">
+                        <a href="#">
+                            <svg width="23" height="22">
+                                <use xlink:href="#icon-star"></use>
+                            </svg>
+                        </a>                      
+                    </li>
+                    <li class="menu__user-item menu__user-item--cart">
+                        <a href="#">
+                            <svg width="23" height="21">
+                                <use xlink:href="#icon-cart"></use>
+                            </svg>
+                        </a>                    
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="wrap-main">
+
+        <section class="banner">
+            <h1 class="banner__header">Флагманский  магазин</h1>
+            <p class="banner__description">Самый большой салон Hilding Anders в России  в самом центре Москвы</p>        
+        </section>
+
+        <section class="store">
+            <article>
+                <section class="store-address">
+                    <div class="store-address__descrition">
+                        <h3 class="store-address__header">Адрес</h2>
+                        <p class="store-address__address">
+                            Москва, 2-я Тверская-Ямская ул.,  д.2,<br>
+                            <sub>м.</sub>Белорусская<br>
+                        </p>
+                        <p class="store-address__contacts">
+                            +7 495 123 45 67<br>
+                            с 10.00 до 00.00 ежедневно
+                        </p>
+                    </div>
+                    <img class="store-address__map" src="img/map.png" alt="карта" width="274" height="275">
+                </section>
+        
+                <section class="for-visitors">
+                    <h3 class="for-visitors__header">Для посетителей</h2>
+                    <p class="for-visitors__description">Приглашаем вас посетить флагманский салон  Hilding Anders в России.<br> Вас ждут:</p>
+                    <ul class="for-visitors__list">
+                        <li class="for-visitors__list-item for-visitors__list-item--delivery">Специальные условия покупки<br> и доставки</li>
+                        <li class="for-visitors__list-item for-visitors__list-item--unique">Уникальные товары, которых<br> нет в других салонах</li>
+                        <li class="for-visitors__list-item for-visitors__list-item--expo">Самая большая выставка<br> продукции Hilding Anders </li>
+                        <li class="for-visitors__list-item for-visitors__list-item--testing">Бесплатное тестирование<br> товаров</li>
+                        <li class="for-visitors__list-item for-visitors__list-item--design">Услуги дизайнера интерьера<br> и личного менеджера-консультанта</li>
+                        <li class="for-visitors__list-item for-visitors__list-item--sale">Специальные скидки и акции</li>
+                    </ul>
+                </section>
+            </article>
+            <aside class="form">
+                <h3 class="form__header">Отправить заявку</h2>
+                <p class="form__description">Хотите заказать специальные услуги во флагмане или задать вопрос? Заполните форму, и мы ответим Вам в ближайшее время.</p>
+                <form class="form__form forms" action="#" method="post">
+                    <label class="form__label" for="name">Имя</label>
+                    <input class="form__input" id="name" type="name" name="">
+
+                    <ul class="form__list">
+                        <li class="form__list-item">
+                            <label class="form__label" for="email">Email</label>
+                            <input class="form__input" id="email" type="email" name="">
+                        </li>
+                        <li class="form__list-item">
+                            <label class="form__label" for="tel">Телефон</label>
+                            <input class="form__input" id="tel" type="tel" name="">                         
+                        </li>
+                        <li class="form__list-item">
+                            <label class="form__label" for="date">Дата визита</label>
+                            <input class="form__input" id="date" type="date" name="">
+                        </li>
+                        <li class="form__list-item">
+                            <label class="form__label" for="time">Время визита</label>
+                            <input class="form__input" id="time" type="time" name="">
+                        </li>
+                    </ul>
+
+                    <label class="form__label" for="comment">Комментарий</label>
+                    <textarea class="form__textarea" name="comment" id="comment" cols="30" rows="3"></textarea>
+                </form>
+                <button class="form__btn btn" type="submit">Отправить</button>
+            </aside>
+        </section>
+
+        <section class="slider">
+            <div class="carousel">
+                    <div class=""><img src="/img/slides/7biko.jpg" alt=""></div>
+                    <div class=""><img src="/img/slides/5reception.jpg" alt=""></div>
+                    <div class=""><img src="/img/slides/interior.jpg" alt=""></div>
+                    <div class=""><img src="/img/slides/11access.jpg" alt=""></div>
+                    <div class=""><img src="/img/slides/13ensen.jpg" alt=""></div>
+                    <div class=""><img src="/img/slides/beds.jpg" alt=""></div>
+                    <div class=""><img src="/img/slides/room.jpg" alt=""></div>
+                    <div class=""><img src="/img/slides/9arzone.jpg" alt=""></div>
+
+<!-- 
+                    <div class="slider__item">
+                        <img src="/img/slides/7biko.jpg" alt="">
+                        <img src="/img/slides/5reception.jpg" alt="">
+                        <img src="/img/slides/interior.jpg" alt="">
+                        <img src="/img/slides/11access.jpg" alt="">
+                    </div>
+                    <div class="slider__item">
+                        <img src="/img/slides/13ensen.jpg" alt="">
+                        <img src="/img/slides/beds.jpg" alt="">
+                        <img src="/img/slides/room.jpg" alt="">
+                        <img src="/img/slides/9arzone.jpg" alt="">
+                    </div> -->
+            </div>
+        </section>
+
+        <section class="news">
+            <h2>Новости флагмана</h2>
+            <ul class="news__list ul-list">
+                <li class="news__list-item">
+                    <img src="img/news-item-1.jpg" alt="Бант" width="279" height="309">
+                    <p>20 января 2017</p>
+                    <h3>Торжественное открытие флагманского  магазина</h3>
+                    <p>Комфортное место для сна – залог отличного самочувствия, ведь полноценный отдых необходим каждому. А создать комфорт для сна помогут удобные матрасы и подушки, которые можно будет купить в магазине Hilding Anders, который уже совсем скоро откроется в ТРЦ «Хорошо!».</p>
+                </li>
+                <li class="news__list-item">
+                    <img src="img/news-item-2.jpg" alt="Зона Hilding" width="272" height="309">
+                    <p>12 апреля 2017</p>
+                    <h3>Новые коллекции матрасов Hilding Anders</h3>
+                    <p>В салоне представлены самые известные и лучшие матрасы со всего мира – надежный и практичный Hilding, романтичный Andre Renault, швейцарский BicoFlex, уникальный Jensen. У нас вы найдете коллекцию интерьерных кроватей и эксклюзивных спальных систем из рогожки.</p>
+                </li>
+            </ul>
+        </section>
+    
+
+    </main>
+
+    <footer class="footer-main">
+        <div class="footer-main__top">
+            <a href="">Магазины</a>
+            <ul class="footer-main__social">
+                <li>Facebook</li>
+                <li>VK</li>
+                <li>Instagramm</li>
+                <li>Youtube</li>
+            </ul>
+            <p>Östra Varvsgatan 4 SE-211 75 Malmö Sweden</p>
+            <p>8 (800) 220-30-00</p>
+            <p>oplata@hilding-anders.ru</p>
+        </div>
+        <div class="footer-main__bottom">
+            <ul class="pay-types">
+                <li>MasterCard</li>
+                <li>Visa</li>
+                <li>PayPal</li>
+            </ul>
+            <p>© 2012–2017 Hilding Anders Group</p>
+            <p>Сделано в <a href="#">Greensight</a></p>
+        </div>
+    </footer>
+
+
+    <script src="js/external.js" type="text/javascript"></script>
+    <script src="js/internal.js" type="text/javascript"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+</body>
+</html>

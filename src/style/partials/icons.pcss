@@ -1,0 +1,53 @@
+.icon {
+    position: relative;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+    text-align: center;
+    vertical-align: middle;
+    transition: color $time ease,
+                background-color $time ease,
+                border-color $time ease,
+                opacity $time ease;
+
+    .btn & {
+        margin: -3px calc($gutter-step * 2) 0 calc(-$gutter-step * 2);
+
+        &.icon--right {
+            margin-right: calc(-$gutter-step * 2);
+            margin-left: calc($gutter-step * 2);
+        }
+    }
+
+    .link & {
+        margin: -3px calc($gutter-step / 2) 0 0;
+
+        &.icon--right {
+            margin-right: 0;
+            margin-left: calc($gutter-step / 2);
+        }
+    }
+
+    &--load {
+        width: 24px;
+        height: 24px;
+
+        .btn:hover &,
+        .btn.is-hover & {
+            transform: rotate(360deg);
+            transition: transform 400ms ease;
+        }
+
+        &-static {
+            background: url('$img_path/svg/load.svg') 50% 50% no-repeat;
+            background-size: cover;
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    &--cross {
+        width: 27px;
+        height: 27px;
+    }
+}

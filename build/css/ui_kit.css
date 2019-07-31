@@ -1,0 +1,307 @@
+/**
+ * Стили для красивой страницы ui kit
+ * Это стили только для оформления самой статичной страницы, это НЕ стили базовых элементов сайта
+ * В прод сборку не попадают
+ */
+
+ /* Настройки шагов адаптива и сетки */
+
+ /* Изменение настроек сетки */
+
+ /* Не понимает переменные в качестве значения ширины :( задать равным $gutter */
+
+ /* Точки адаптива */
+
+ /* Сокращения
+ Пример использования: @media (--mobile) {}
+ !Плагин не понимает переменные в качестве значения ширины :(
+*/
+
+ /* Переменные */
+
+ /* Основные цвета проекта */
+
+ /* /Основные цвета проекта */
+
+ /* Основные размеры для элементов */
+
+ /* /Основные размеры для элементов */
+
+ /* Базовый путь к папке с картинками
+ * Использование: background-image: url('$img_path/svg/load.svg')
+ */
+
+ /* Время для основных анимаций (изменение цфета, фона и пр.) */
+
+ .ui-kit-main {
+    counter-reset: uiSectionCounter;
+}
+
+ .ui-kit-section {
+    padding: 32px 0;
+}
+
+ .ui-kit-section__hl {
+        margin: 0 0 64px 0;
+        font-size: 32px;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+ .ui-kit-section__hl-num {
+            float: right;
+            position: relative;
+            display: inline-block
+        }
+
+ .ui-kit-section__hl-num:before {
+                counter-increment: uiSectionCounter;
+                content:  '\2014 ' counter(uiSectionCounter);
+                display: inline-block;
+                position: absolute;
+                right: 0;
+            }
+
+ .ui-kit-section__desc {
+        opacity: .6;
+    }
+
+ .ui-kit-section__hl + .ui-kit-section__desc {
+            margin: 32px 0 64px 0;
+        }
+
+ .ui-kit-grid {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+}
+
+ .ui-kit-grid__col {
+        background: #000;
+        width: calc(8.325% - 29.33333px);
+        height: 100px;
+        opacity: .5;
+    }
+
+ .ui-kit-grid__col:nth-child(1n) {
+        float: left;
+        margin-right: 32px;
+        clear: none;
+    }
+
+ .ui-kit-grid__col:last-child {
+        margin-right: 0;
+    }
+
+ .ui-kit-grid__col:nth-child(12n) {
+        margin-right: 0;
+        float: right;
+    }
+
+ .ui-kit-grid__col:nth-child(12n + 1) {
+        clear: both;
+    }
+
+ .ui-kit-colors {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+}
+
+ .ui-kit-colors__col {
+        border: 1px solid #000;
+        width: calc(8.325% - 29.33333px);
+        height: 50px;
+        font-size: 11px;
+        font-size: 0.6875rem;
+        line-height: 50px;
+        line-height: 3.125rem;
+        text-align: center
+    }
+
+ .ui-kit-colors__col:nth-child(1n) {
+        float: left;
+        margin-right: 32px;
+        clear: none
+    }
+
+ .ui-kit-colors__col:last-child {
+        margin-right: 0
+    }
+
+ .ui-kit-colors__col:nth-child(12n) {
+        margin-right: 0;
+        float: right
+    }
+
+ .ui-kit-colors__col:nth-child(12n + 1) {
+        clear: both
+    }
+
+ .ui-kit-colors__col:nth-child(1) {
+            background: #fff;
+            color: #000;
+        }
+
+ .ui-kit-colors__col:nth-child(2) {
+            background: #f1f1f1;
+            color: #000;
+        }
+
+ .ui-kit-colors__col:nth-child(3) {
+            background: #ccc;
+        }
+
+ .ui-kit-colors__col:nth-child(4) {
+            background: #999;
+        }
+
+ .ui-kit-colors__col:nth-child(5) {
+            background: #e22e2e;
+        }
+
+ .ui-kit-colors__col:nth-child(6) {
+            background: #54bf6d;
+            color: #000;
+        }
+
+ .ui-kit-cols {
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+}
+
+ .ui-kit-cols__col {
+        width: calc(49.95% - 16px);
+    }
+
+ .ui-kit-cols__col:nth-child(1n) {
+        float: left;
+        margin-right: 32px;
+        clear: none;
+    }
+
+ .ui-kit-cols__col:last-child {
+        margin-right: 0;
+    }
+
+ .ui-kit-cols__col:nth-child(2n) {
+        margin-right: 0;
+        float: right;
+    }
+
+ .ui-kit-cols__col:nth-child(2n + 1) {
+        clear: both;
+    }
+
+ .ui-kit-desc {
+    font-size: 11px;
+    font-size: 0.6875rem;
+    opacity: .6;
+}
+
+ .ui-kit-sidebar {
+    background: rgba(0, 0, 0, .5);
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10000
+}
+
+ .ui-kit-sidebar.is-visible {
+        display: block;
+    }
+
+ .ui-kit-sidebar-open {
+        background: #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+        position: fixed;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 32px;
+        height: 32px;
+        font-size: 0;
+        line-height: 0;
+        cursor: pointer;
+        z-index: 9999;
+    }
+
+ .ui-kit-sidebar-open span {
+            background: #000;
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 16px;
+            height: 4px;
+            text-indent: -9999px
+        }
+
+ .ui-kit-sidebar-open span::before,
+            .ui-kit-sidebar-open span::after {
+                content: '';
+                background: #000;
+                display: inline-block;
+                position: absolute;
+                left: 0;
+                width: 16px;
+                height: 4px;
+            }
+
+ .ui-kit-sidebar-open span::before {
+                top: -8px;
+            }
+
+ .ui-kit-sidebar-open span::after {
+                bottom: -8px;
+            }
+
+ .ui-kit-sidebar__content {
+        background: #fff;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 300px;
+        padding: 16px;
+    }
+
+ .ui-kit-sidebar__hl {
+            margin-bottom: 24px;
+            font-weight: bold;
+            line-height: 1;
+        }
+
+ .ui-kit-sidebar__scroll {
+            overflow-x: hidden;
+            overflow: auto;
+            position: absolute;
+            top: 56px;
+            right: 16px;
+            bottom: 16px;
+            left: 16px;
+        }
+
+ .ui-kit-sidebar__close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 16px;
+            height: 16px;
+            font-size: 0;
+            cursor: pointer;
+        }
+
+ .ui-kit-sidebar__close .icon {
+                width: 16px;
+                height: 16px;
+            }
+
+/*# sourceMappingURL=ui_kit.css.map */

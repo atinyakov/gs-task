@@ -1,0 +1,65 @@
+/* Стиль и размер элементов форм */
+
+@mixin field-style(
+    $bg,
+    $bg-hover,
+    $bg-focus,
+    $bg-active,
+    $bg-disabled,
+
+    $bd,
+    $bd-hover,
+    $bd-focus,
+    $bd-active,
+    $bd-disabled,
+
+    $color,
+    $color-hover,
+    $color-focus,
+    $color-active,
+    $color-disabled
+) {
+    background-color: $bg;
+    border-color: $bd;
+    color: $color;
+
+    &:hover,
+    &.is-hover {
+        background-color: $bg-hover;
+        border-color: $bd-hover;
+        color: $color-hover;
+    }
+
+    &:focus,
+    &.is-focus {
+        background-color: $bg-focus;
+        border-color: $bd-focus;
+        color: $color-focus;
+    }
+
+    &:active,
+    &.is-active {
+        background-color: $bg-active;
+        border-color: $bd-active;
+        color: $color-active;
+    }
+
+    &.is-disabled,
+    .is-disabled &,
+    &:disabled {
+        background-color: $bg-disabled;
+        border-color: $bd-disabled;
+        color: $color-disabled;
+    }
+}
+
+@mixin field-size(
+    $height,
+    $padding-horizontal,
+    $padding-vertical,
+    $font-size
+) {
+    height: $height;
+    padding: $padding-vertical $padding-horizontal;
+    font-size: $font-size;
+}

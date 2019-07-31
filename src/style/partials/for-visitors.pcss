@@ -1,0 +1,102 @@
+.for-visitors {
+    font-size: 16px;
+    line-height: 24px;
+
+
+    &__description {
+        padding: 12px 0 0 121px;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 66px 0 0 208px;
+
+        &-item {
+            width: 359px;
+            position: relative;
+            height: 104px;
+
+
+            &--delivery {
+                &:before {
+                    position: absolute;
+                    left: -96px;
+                    top: -7px;
+                    content: url('../img/svg/magnifier.svg');
+                    width: 57px;
+                    height: 58px;
+                }
+            }
+
+            &--unique {
+                &:before {
+                    position: absolute;
+                    left: -87px;
+                    content: url('../img/svg/divan.svg');
+                    width: 61px;
+                    height: 41px;
+                }
+            }
+
+            &--expo {
+                &:before {
+                    position: absolute;
+                    left: -88px;
+                    content: url('../img/svg/exibition.svg');
+                    width: 51px;
+                    height: 50px;
+                }
+            }
+
+            &--testing {
+                &:before {
+                    position: absolute;
+                    left: -86px;
+                    top: -9px;
+                    content: url('../img/svg/bed.svg');
+                    width: 67px;
+                    height: 50px;
+                }
+            }
+
+            &--design {
+                &:before {
+                    position: absolute;
+                    left: -88px;
+                    top: -6px;
+                    content: url('../img/svg/badge.svg');
+                    width: 55px;
+                    height: 48px;
+                }
+            }
+
+            &--sale {
+                &:before {
+                    position: absolute;
+                    left: -80px;
+                    top: -9px;
+                    content: url('../img/svg/ellipse.svg');
+                    width: 63px;
+                    height: 63px;
+                }
+
+                &:after {
+                    position: absolute;
+                    left: -64px;
+                    content: url(../img/svg/percent.svg);
+                    width: 31px;
+                    height: 30px;
+                    top: 7px;
+                }
+            }
+        }
+    }
+
+    &__header {
+        font-size: 40px;
+        font-size: 2.5rem;
+        padding: 20px 0 0 119px;
+    }
+}

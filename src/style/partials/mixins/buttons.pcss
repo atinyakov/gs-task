@@ -1,0 +1,65 @@
+/* Стиль и размер кнопок */
+
+@mixin button-style(
+    $bg,
+    $bg-hover,
+    $bg-active,
+    $bg-disabled,
+
+    $bd,
+    $bd-hover,
+    $bd-active,
+    $bd-disabled,
+
+    $color,
+    $color-hover,
+    $color-active,
+    $color-disabled
+) {
+    background-color: $bg;
+    border-color: $bd;
+    color: $color;
+    fill: $color;
+
+    &:hover,
+    &.is-hover,
+    &:focus,
+    &.is-focus {
+        background-color: $bg-hover;
+        border-color: $bd-hover;
+        color: $color-hover;
+        fill: $color-hover;
+    }
+
+    &:active,
+    &.is-active {
+        background-color: $bg-active;
+        border-color: $bd-active;
+        color: $color-active;
+        fill: $color-active;
+    }
+
+    &.is-disabled,
+    .is-disabled &,
+    &[disabled] {
+        background-color: $bg-disabled;
+        border-color: $bd-disabled;
+        color: $color-disabled;
+        fill: $color-disabled;
+    }
+}
+
+@mixin button-size(
+    $height,
+    $border-width,
+    $padding-horizontal,
+    $font-size
+) {
+    border-width: $border-width;
+    height: $height;
+    padding-right: $padding-horizontal;
+    padding-left: $padding-horizontal;
+    font-size: $font-size;
+    /*line-height: calc($height - $border-width * 2);*/
+    line-height: $height;
+}

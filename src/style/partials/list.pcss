@@ -1,0 +1,54 @@
+.ul-list {
+    margin-bottom: $gutter;
+
+    ul, ol {
+        margin: calc($gutter / 2) 0;
+    }
+
+    li {
+        position: relative;
+        margin-bottom: calc($gutter / 2);
+        padding-left: calc($gutter-step * 3);
+    }
+
+    & > li,
+    ul > li {
+        &:before {
+            content: '';
+            background: $cl-global;
+            display: inline-block;
+            position: absolute;
+            top: 11px;
+            left: 0;
+            width: $gutter-step;
+            height: 1px;
+        }
+    }
+}
+
+.ol-list {
+    counter-reset: olCounter;
+    margin-bottom: $gutter;
+
+    ol, ul {
+        counter-reset: olCounter;
+        margin: calc($gutter / 2) 0;
+    }
+
+    li {
+        position: relative;
+        margin-bottom: calc($gutter / 2);
+        padding-left: calc($gutter-step * 3);
+    }
+
+    & > li,
+    ol > li {
+        &:before {
+            counter-increment: olCounter;
+            content: counter(olCounter) '.';
+            display: inline-block;
+            position: absolute;
+            left: 0;
+        }
+    }
+}

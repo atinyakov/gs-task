@@ -1,0 +1,51 @@
+.form {
+    background-color: #f5f5f5;
+    
+    &__btn {
+        margin: 6px 58px;
+    }
+    
+    &__form {
+        display: flex;
+        flex-direction: column;
+        width: 633px;
+    }
+
+    &__description {
+        padding: 0px 56px;
+        margin-bottom: 33px;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 14px calc($gutter-step * 8) 0 calc($gutter-step * 7);
+
+        &-item {
+            width: 248px;
+            height: 96px;
+
+            input {
+                margin: 0;
+                width: 100%;
+            }
+
+            label {
+                padding-left: 0;
+            }
+        }
+    }
+
+    &__grid {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__header {
+        font-size: 32px;
+        padding: 82px 165px 0;
+        margin-bottom: 47px;
+
+    }
+}

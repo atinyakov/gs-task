@@ -1,0 +1,393 @@
+/* Стилизация элементов форм */
+
+label,
+.label {
+    display: block;
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 57px;
+    color: $cl-dk-grey;
+
+    /* Скрытый лейбл для скринридеров */
+    &.sr-only {
+        border: 0;
+        position: absolute;
+        overflow: hidden;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        clip: rect(0, 0, 0, 0);
+    }
+}
+
+input[type="name"],
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+input:not([type]),
+textarea,
+select {
+    border: 1px solid #d1d4d9;
+    border-radius: 24px;
+    border-width: 1px;
+    display: block;
+    position: relative;
+    width: 82%;
+    margin: 0 auto 0;
+    padding: 0;
+    outline: none;
+    zoom: 1;
+    transition: all $time ease;
+
+    @include field-style(
+        white,
+        transparent,
+        transparent,
+        transparent,
+        transparent,
+
+        #d1d4d9,
+        $cl-global,
+        $cl-blue,
+        $cl-global,
+        $cl-grey,
+
+        $cl-global,
+        $cl-global,
+        $cl-global,
+        $cl-global,
+        $cl-dk-grey
+    );
+    @include field-size(
+        $field-height,
+        calc($gutter-step * 2),
+        calc($gutter-step * 1.5),
+        16px
+    );
+
+    &.is-disabled,
+    .is-disabled &,
+    &[disabled] {
+        cursor: default;
+        pointer-events: none;
+    }
+
+    @include placeholder {
+        color: $cl-grey;
+    }
+
+    &.parsley-error {
+        border-color: $cl-red;
+    }
+}
+
+textarea {
+    min-height: $field-height;
+    height: auto;
+    resize: vertical;
+
+    &.parsley-error {
+        border-color: $cl-red;
+    }
+}
+
+/* Кастомный файловый инпут */
+
+.custom-file {
+    position: relative;
+    margin-bottom: calc($gutter-step * 4);
+
+    @include clearfix;
+
+    .btn {
+        overflow: hidden;
+        margin: 0;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    input[type=file],
+    input[type=file]:focus,
+    input[type=file]:hover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        opacity: 0;
+        cursor: pointer;
+        z-index: 99;
+    }
+
+    &__name {
+        @include button-size(
+            $field-height,
+            0,
+            0,
+            14px
+        );
+
+        display: inline-block;
+        margin-left: 10px;
+    }
+}
+
+/* Кастомные чекбоксы и радио */
+
+input[type="checkbox"],
+input[type="radio"] {
+    position: absolute;
+    clip: rect(0,0,0,0);
+
+    & + label {
+        position: relative;
+        display: block;
+        margin-bottom: calc($gutter-step * 2);
+        padding-left: 30px;
+        cursor: pointer;
+
+        &:before,
+        &:after {
+            content: '';
+            position:absolute;
+            display: block;
+            transition: all $time ease;
+        }
+
+        &:before {
+            content: '';
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            border: 1px solid $cl-global;
+        }
+
+        &:after {
+            top: 7px;
+            left: 7px;
+            width: 8px;
+            height: 8px;
+        }
+    }
+
+    &:disabled {
+        & + label {
+            color: $cl-grey;
+            cursor: not-allowed;
+
+            &:before {
+                border-color: $cl-grey;
+            }
+        }
+    }
+
+    &:checked {
+        & + label:after {
+            background: $cl-blue;
+        }
+
+        &:disabled + label:after {
+            background: $cl-grey;
+        }
+    }
+}
+
+input[type="checkbox"] + label:before,
+input[type="checkbox"] + label:after {
+    border-radius: 2px;
+}
+
+input[type="radio"] + label:before,
+input[type="radio"] + label:after {
+    border-radius: 50%;
+}
+
+/* select2 */
+
+.select2-container {
+    display: block;
+    margin: 0 0 calc($gutter * 1.5) 0;
+    font-family: 'pt_sans', Arial, Helvetica, 'Helvetica CY', 'Nimbus Sans L', sans-serif;
+    font-size: 16px;
+    text-align: left;
+    text-transform: none;
+
+    &.select2 {
+        width: 100% !important;
+    }
+
+    .select2-selection--single {
+        border-color: $cl-grey;
+        border-radius: 0;
+        box-shadow: none;
+        height: $field-height;
+        line-height: calc($field-height - 2);
+        transition: color $time ease,
+                    background-color $time ease,
+                    border-color $time ease;
+
+        .select2-selection__rendered {
+            padding-right: calc($gutter-step * 5);
+            padding-left: calc($gutter-step * 2);
+            line-height: $field-height;
+        }
+
+        .select2-selection__placeholder {
+            color: $cl-grey;
+        }
+
+        .select2-selection__arrow {
+            width: calc($field-height - 2);
+            height: calc($field-height - 2);
+
+            b {
+                border-top-color: $cl-global;
+                border-width: 6px 5px 0;
+                margin-left: -5px;
+                transition: color $time ease,
+                            background-color $time ease,
+                            border-color $time ease;
+            }
+        }
+    }
+
+    &.select2-container--focus,
+    &.select2-container--open {
+        .select2-selection--single {
+            border-color: $cl-blue;
+        }
+    }
+
+    &.select2-container--open {
+        .select2-selection--single {
+            .select2-selection__arrow {
+                b {
+                    border-bottom-color: $cl-global;
+                    border-width: 0 5px 6px;
+                }
+            }
+        }
+    }
+
+    &.select2-container--disabled {
+        .select2-selection--single {
+            background: $cl-lg-grey;
+            border-color: $cl-dk-grey;
+            color: $cl-dk-grey;
+
+            .select2-selection__arrow {
+                b {
+                    border-top-color: $cl-dk-grey;
+                }
+            }
+        }
+
+        &.select2-container--focus,
+        &.select2-container--open {
+            .select2-selection--single {
+                border-color: $cl-dk-grey;
+            }
+        }
+    }
+
+    .select2-search--dropdown {
+        .select2-search__field {
+            border-color: $cl-grey;
+            height: 30px;
+            margin: 0;
+            padding: 4px 10px;
+        }
+    }
+
+    .select2-results__option {
+        list-style: none outside;
+        margin: 0;
+        padding: $gutter-step calc($gutter-step * 2);
+
+        &--highlighted[aria-selected] {
+            background: $cl-blue;
+            color: #fff;
+        }
+
+        &[aria-selected="true"] {
+            background: $cl-lg-grey;
+            color: $cl-global;
+
+            &:hover {
+                background: $cl-blue;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.select2-dropdown {
+    border-color: $cl-blue;
+    border-radius: 0;
+    font-size: 16px;
+}
+
+/* Parsley */
+
+.parsley-error {
+    border-color: $cl-red;
+}
+
+.parsley-error-message {
+    color: $cl-red;
+    font-size: 12px;
+    margin: 2px 0 0 0;
+}
+
+/* /Parsley */
+
+/* Анимация label */
+
+.field {
+    position: relative;
+    margin: 0 0 calc($gutter-step * 5) 0;
+
+    label,
+    .label {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        margin: 0;
+        padding: 0 calc($gutter-step * 2);
+        z-index: 2;
+        cursor: pointer;
+        transform: translateY(calc($gutter-step * 1.5));
+        transition: all $time ease;
+    }
+
+    input,
+    textarea {
+        margin-bottom: 0;
+    }
+
+    &.is-filled,
+    &.is-filled {
+        label,
+        .label {
+            padding: 0;
+            cursor: default;
+            font-size: 12px;
+            transform: translateY(calc(-$gutter-step * 2));
+        }
+    }
+}
+
+/* /Анимация label */

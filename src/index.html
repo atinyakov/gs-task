@@ -1,0 +1,132 @@
+@@include('template/head.html')
+<body>
+    @@include('template/old_ie_update.html')
+
+    @@include('img/svg/sprite.svg')
+
+    
+    @@include('template/header.html')
+    <main class="wrap-main">
+
+        <section class="banner">
+            <h1 class="banner__header">Флагманский  магазин</h1>
+            <p class="banner__description">Самый большой салон Hilding Anders в России  в самом центре Москвы</p>        
+        </section>
+
+        <section class="store">
+            <article>
+                <section class="store-address">
+                    <div class="store-address__descrition">
+                        <h3 class="store-address__header">Адрес</h2>
+                        <p class="store-address__address">
+                            Москва, 2-я Тверская-Ямская ул.,  д.2,<br>
+                            <sub>м.</sub>Белорусская<br>
+                        </p>
+                        <p class="store-address__contacts">
+                            +7 495 123 45 67<br>
+                            с 10.00 до 00.00 ежедневно
+                        </p>
+                    </div>
+                    <img class="store-address__map" src="img/map.png" alt="карта" width="274" height="275">
+                </section>
+        
+                <section class="for-visitors">
+                    <h3 class="for-visitors__header">Для посетителей</h2>
+                    <p class="for-visitors__description">Приглашаем вас посетить флагманский салон  Hilding Anders в России.<br> Вас ждут:</p>
+                    <ul class="for-visitors__list">
+                        <li class="for-visitors__list-item for-visitors__list-item--delivery">Специальные условия покупки<br> и доставки</li>
+                        <li class="for-visitors__list-item for-visitors__list-item--unique">Уникальные товары, которых<br> нет в других салонах</li>
+                        <li class="for-visitors__list-item for-visitors__list-item--expo">Самая большая выставка<br> продукции Hilding Anders </li>
+                        <li class="for-visitors__list-item for-visitors__list-item--testing">Бесплатное тестирование<br> товаров</li>
+                        <li class="for-visitors__list-item for-visitors__list-item--design">Услуги дизайнера интерьера<br> и личного менеджера-консультанта</li>
+                        <li class="for-visitors__list-item for-visitors__list-item--sale">Специальные скидки и акции</li>
+                    </ul>
+                </section>
+            </article>
+            <aside class="form">
+                <h3 class="form__header">Отправить заявку</h2>
+                <p class="form__description">Хотите заказать специальные услуги во флагмане или задать вопрос? Заполните форму, и мы ответим Вам в ближайшее время.</p>
+                <form class="form__form forms" action="#" method="post">
+                    <label class="form__label" for="name">Имя</label>
+                    <input class="form__input" id="name" type="name" name="">
+
+                    <ul class="form__list">
+                        <li class="form__list-item">
+                            <label class="form__label" for="email">Email</label>
+                            <input class="form__input" id="email" type="email" name="">
+                        </li>
+                        <li class="form__list-item">
+                            <label class="form__label" for="tel">Телефон</label>
+                            <input class="form__input" id="tel" type="tel" name="">                         
+                        </li>
+                        <li class="form__list-item">
+                            <label class="form__label" for="date">Дата визита</label>
+                            <input class="form__input" id="date" type="date" name="">
+                        </li>
+                        <li class="form__list-item">
+                            <label class="form__label" for="time">Время визита</label>
+                            <input class="form__input" id="time" type="time" name="">
+                        </li>
+                    </ul>
+
+                    <label class="form__label" for="comment">Комментарий</label>
+                    <textarea class="form__textarea" name="comment" id="comment" cols="30" rows="3"></textarea>
+                </form>
+                <button class="form__btn btn" type="submit">Отправить</button>
+            </aside>
+        </section>
+
+        <section class="slider">
+            <div class="carousel">
+                    <div class=""><img src="/img/slides/7biko.jpg" alt=""></div>
+                    <div class=""><img src="/img/slides/5reception.jpg" alt=""></div>
+                    <div class=""><img src="/img/slides/interior.jpg" alt=""></div>
+                    <div class=""><img src="/img/slides/11access.jpg" alt=""></div>
+                    <div class=""><img src="/img/slides/13ensen.jpg" alt=""></div>
+                    <div class=""><img src="/img/slides/beds.jpg" alt=""></div>
+                    <div class=""><img src="/img/slides/room.jpg" alt=""></div>
+                    <div class=""><img src="/img/slides/9arzone.jpg" alt=""></div>
+
+<!-- 
+                    <div class="slider__item">
+                        <img src="/img/slides/7biko.jpg" alt="">
+                        <img src="/img/slides/5reception.jpg" alt="">
+                        <img src="/img/slides/interior.jpg" alt="">
+                        <img src="/img/slides/11access.jpg" alt="">
+                    </div>
+                    <div class="slider__item">
+                        <img src="/img/slides/13ensen.jpg" alt="">
+                        <img src="/img/slides/beds.jpg" alt="">
+                        <img src="/img/slides/room.jpg" alt="">
+                        <img src="/img/slides/9arzone.jpg" alt="">
+                    </div> -->
+            </div>
+        </section>
+
+        <section class="news">
+            <h2>Новости флагмана</h2>
+            <ul class="news__list ul-list">
+                <li class="news__list-item">
+                    <img src="img/news-item-1.jpg" alt="Бант" width="279" height="309">
+                    <p>20 января 2017</p>
+                    <h3>Торжественное открытие флагманского  магазина</h3>
+                    <p>Комфортное место для сна – залог отличного самочувствия, ведь полноценный отдых необходим каждому. А создать комфорт для сна помогут удобные матрасы и подушки, которые можно будет купить в магазине Hilding Anders, который уже совсем скоро откроется в ТРЦ «Хорошо!».</p>
+                </li>
+                <li class="news__list-item">
+                    <img src="img/news-item-2.jpg" alt="Зона Hilding" width="272" height="309">
+                    <p>12 апреля 2017</p>
+                    <h3>Новые коллекции матрасов Hilding Anders</h3>
+                    <p>В салоне представлены самые известные и лучшие матрасы со всего мира – надежный и практичный Hilding, романтичный Andre Renault, швейцарский BicoFlex, уникальный Jensen. У нас вы найдете коллекцию интерьерных кроватей и эксклюзивных спальных систем из рогожки.</p>
+                </li>
+            </ul>
+        </section>
+    
+
+    </main>
+
+    @@include('template/footer.html')
+
+    @@include('template/foot.html')
+    <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+</body>
+</html>

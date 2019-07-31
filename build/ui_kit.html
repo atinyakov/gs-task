@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie8" lang="ru-RU" prefix="og: http://ogp.me/ns#"><![endif]-->
+<!--[if IE 9 ]><html class="ie9" lang="ru-RU" prefix="og: http://ogp.me/ns#"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="ru-RU" prefix="og: http://ogp.me/ns#"><!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="skype_toolbar" content="skype_toolbar_parser_compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png"> -->
+    <title>Blank</title>
+
+    <link href="css/external.css" rel="stylesheet">
+    <link href="css/internal.css" rel="stylesheet">
+
+    <!-- При интеграции файл ui_kit.css НЕ подключать -->
+    <link href="css/ui_kit.css" rel="stylesheet">
+
+    <!-- jquery подключаем в шапке т.к. какой-то js может быть внутри компонентов -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <!-- Для ie10 -->
+    <!--[if !IE]><!--><script>if(/*@cc_on!@*/false){document.documentElement.className+=' ie10';}</script><!--<![endif]-->
+</head>
+
+<body>
+    <!--[if lt IE 10]>
+    <div class="browse-happy">
+        <div class="container">
+            <p class="browse-happy__notice">Мы обнаружили, что вы используете <strong>устаревшую версию</strong> браузера Internet Explorer</p>
+            <p class="browse-happy__security">Из соображений безопасности этот сайт поддерживает Internet Explorer версии 10 и выше
+                <br>Кроме того, этот и многие другие сайты могут отображаться <strong>некорректно</strong></p>
+            <p class="browse-happy__update">Пожалуйста, обновите свой браузер по этой <a href="http://browsehappy.com/" target="_blank">ссылке</a></p>
+            <p class="browse-happy__recommend">(мы рекомендуем <a href="http://www.google.com/chrome" target="_blank">Google Chrome</a>)</p>
+        </div>
+    </div>
+    <![endif]-->
+
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0" style="position:absolute">
+	
+    		<symbol id="icon-balance" viewBox="0 0 24 20.844">
+    			<path fill-rule="evenodd" d="M15.74 9.379a4.139 4.139 0 0 0 7.05 2.89A4.04 4.04 0 0 0 24 9.379a.78.78 0 0 0-.12-.42l-2.59-4.277a.814.814 0 0 0 .51-.753 1.069 1.069 0 0 0-.8-1.085h-8v-2c0-1.114-2-1.114-2 0v2H3a1.069 1.069 0 0 0-.8 1.087.814.814 0 0 0 .51.753L.12 8.961a.782.782 0 0 0-.12.42 4.13 4.13 0 0 0 8.26 0 .782.782 0 0 0-.12-.42L5 4.844h6v14H6c-1.04 0-1.19 2-.16 2h12.32c1.03 0 .88-2-.16-2h-5v-14h6l-3.14 4.117a.782.782 0 0 0-.12.418zM4.13 11.832a2.481 2.481 0 0 1-2.34-1.635h4.67a2.468 2.468 0 0 1-2.33 1.634zm1.84-3.269H2.28l1.85-3.044zm13.9-3.044l1.85 3.044h-3.69zm2.34 4.679a2.492 2.492 0 0 1-4.68 0h4.68z"></path>
+    		</symbol>
+	
+    		<symbol id="icon-cart" viewBox="0 0 23 21">
+    			<path fill-rule="evenodd" d="M18.222 15H5.012L3.191 2H0V0h4.885l.567 4H23zm-11.51-2h10.24l3.038-7H5.735zm1.1 4a2 2 0 1 1-1.954 2 1.978 1.978 0 0 1 1.958-2zm7.817 0a2 2 0 1 1-1.955 2 1.978 1.978 0 0 1 1.959-2z"></path>
+    		</symbol>
+	
+    		<symbol id="icon-cross" viewBox="0 0 27 27">
+    			<path fill-rule="evenodd" d="M26.993 25.483l-1.416 1.415L13.546 14.87 1.515 26.898.1 25.483l12.031-12.028L.1 1.428 1.515.013l12.031 12.028L25.577.013l1.416 1.415-12.031 12.027 12.031 12.028z"></path>
+    		</symbol>
+	
+    		<symbol id="icon-hamburger" viewBox="0 0 36 24">
+    			<path fill-rule="evenodd" d="M0 11h36v2H0v-2zM0 0h36v2H0V0zm0 22h36v2H0v-2z"></path>
+    		</symbol>
+	
+    		<symbol id="icon-load" viewBox="0 0 24 24">
+    			<path d="M23.532 8.68A12.024 12.024 0 0 0 16.553.9a12.086 12.086 0 0 0-4.539-.9v1.47a10.508 10.508 0 0 1 7.451 3.06 10.353 10.353 0 0 1 2.663 4.52 10.471 10.471 0 0 1 .184 5.19 10.275 10.275 0 0 1-2.336 4.64l-2.046-2.01v4.99l5.1.08-2.046-2.04a11.937 11.937 0 0 0 2.548-11.22zM1.86 14.96a10.477 10.477 0 0 1-.171-5.19 10.333 10.333 0 0 1 2.349-4.65l2.046 2.03V2.13l-5.1-.05L3.018 4.1a11.951 11.951 0 0 0 4.433 18.99 11.991 11.991 0 0 0 4.566.91v-1.44a10.609 10.609 0 0 1-10.157-7.6z"></path>
+    		</symbol>
+	
+    		<symbol id="icon-star" viewBox="0 0 23 22">
+    			<path fill-rule="evenodd" d="M23 8.524a.72.72 0 0 0-.77-.638l-6.94-1.011L12.18.569a.691.691 0 0 0-1.36 0L7.71 6.875.77 7.886a.72.72 0 0 0-.77.638 1.046 1.046 0 0 0 .34.665l5.04 4.907-1.19 6.931a2.087 2.087 0 0 0-.03.276.8.8 0 0 0 .15.492.489.489 0 0 0 .43.2 1.132 1.132 0 0 0 .55-.166l6.21-3.272 6.21 3.272a1.078 1.078 0 0 0 .55.166.565.565 0 0 0 .57-.693 1.816 1.816 0 0 0-.02-.277l-1.19-6.93 5.02-4.907a1 1 0 0 0 .36-.664zm-7.28 4.948l.99 5.836-5.21-2.759-5.23 2.759 1.01-5.836-4.23-4.117 5.84-.86L11.5 3.2l2.61 5.295 5.84.86z"></path>
+    		</symbol>
+	
+    </svg>
+
+
+    <header class="header-main">
+        <div class="container">
+            <nav class="menu">
+                <img class="menu__logo" src="img/logo.png" alt="Логотип" width="116" height="36">
+                <ul class="menu__goods">
+                    <li class="menu__item menu__item--mobile">
+                        <a href="#">
+                            <svg width="36" height="24">
+                                <use xlink:href="#icon-hamburger"></use>
+                             </svg>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="">Матрасы</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="">Кровати</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="">Диваны</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="">Подушки</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="">Детские матрасы</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="">Наматрасники</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="">Постельное белье</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="">Одеяла</a>
+                    </li>
+                </ul>
+                <ul class="menu__user">
+                    <li class="menu__user-item menu__user-item--compare">
+                        <a href="#">
+                            <svg width="24" height="21">
+                                <use xlink:href="#icon-balance"></use>
+                            </svg>
+                        </a> 
+                    </li>
+                    <li class="menu__user-item menu__user-item--favorite">
+                        <a href="#">
+                            <svg width="23" height="22">
+                                <use xlink:href="#icon-star"></use>
+                            </svg>
+                        </a>                      
+                    </li>
+                    <li class="menu__user-item menu__user-item--cart">
+                        <a href="#">
+                            <svg width="23" height="21">
+                                <use xlink:href="#icon-cart"></use>
+                            </svg>
+                        </a>                    
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <main class="wrap-main ui-kit-main">
+
+        <section id="grid" class="section ui-kit-section">
+            <div class="container">
+
+                <h2 class="ui-kit-section__hl">
+                    <span class="ui-kit-section__hl-num">&nbsp;</span>
+                    Сетка
+                </h2>
+
+                <p class="ui-kit-section__desc">Колонок: 12 ($grid-columns) <br>Отступ: 32px ($gutter) <br>Шаг сетки (используется в вертикальных отступах): 8px ($gutter-step) <br>Настройка: grid_settings.pcss</p>
+
+                <div class="ui-kit-grid">
+                    <div class="ui-kit-grid__col"></div>
+                    <div class="ui-kit-grid__col"></div>
+                    <div class="ui-kit-grid__col"></div>
+                    <div class="ui-kit-grid__col"></div>
+                    <div class="ui-kit-grid__col"></div>
+                    <div class="ui-kit-grid__col"></div>
+                    <div class="ui-kit-grid__col"></div>
+                    <div class="ui-kit-grid__col"></div>
+                    <div class="ui-kit-grid__col"></div>
+                    <div class="ui-kit-grid__col"></div>
+                    <div class="ui-kit-grid__col"></div>
+                    <div class="ui-kit-grid__col"></div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="colors" class="section ui-kit-section">
+            <div class="container">
+
+                <h2 class="ui-kit-section__hl">
+                    <span class="ui-kit-section__hl-num">&nbsp;</span>
+                    Основные цвета
+                </h2>
+
+                <p class="ui-kit-section__desc">Настройка: variables.pcss</p>
+
+                <div class="ui-kit-colors">
+                    <div class="ui-kit-colors__col">#ffffff</div>
+                    <div class="ui-kit-colors__col">#f1f1f1</div>
+                    <div class="ui-kit-colors__col">#cccccc</div>
+                    <div class="ui-kit-colors__col">#999999</div>
+                    <div class="ui-kit-colors__col">#e22e2e</div>
+                    <div class="ui-kit-colors__col">#54bf6d</div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="containers" class="section ui-kit-section">
+            <div class="container">
+
+                <h2 class="ui-kit-section__hl">
+                    <span class="ui-kit-section__hl-num">&nbsp;</span>
+                    Контейнеры контента
+                </h2>
+
+                <p class="ui-kit-section__desc">Настройка: container.pcss</p>
+
+                <hr>
+                <p>Основной контейнер (широкий)</p>
+                <hr>
+
+                <div class="container__inside">
+                    <hr>
+                    <p>Вспомогательный контейнер (узкий), может находиться только внутри основного контейнера</p>
+                    <hr>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="fonts" class="section ui-kit-section">
+            <div class="container">
+
+                <h2 class="ui-kit-section__hl">
+                    <span class="ui-kit-section__hl-num">&nbsp;</span>
+                    Шрифты
+                </h2>
+
+                <p class="ui-kit-section__desc"><strong>PT Sans Bold</strong> <br><i>PT Sans Italic</i> <br>PT Sans Regular <br>Настройка: fonts.pcss, base.pcss</p>
+
+                <h1>Заголовок H1</h1>
+                <p class="ui-kit-desc">PT Sans Bold 64px / 1.125 (72px)</p>
+                <h2>Заголовок H2</h2>
+                <p class="ui-kit-desc">PT Sans Bold 48px / 1.16 (56px)</p>
+                <h3>Заголовок H3</h3>
+                <p class="ui-kit-desc">PT Sans Bold 64px / 1.2 (48px)</p>
+                <h4>Заголовок H4 - H6</h4>
+                <p class="ui-kit-desc">PT Sans Bold 16px / 1.5 (24px)</p>
+
+                <p>Основной текст. <br>Для торговли в интернете мы делаем сайты, которые показывают хорошие цифры. Соберем аккуратный каталог и корзину, сделаем удобный кабинет, найдем особенную подачу для продукта.</p>
+                <p class="ui-kit-desc">PT Sans Regular 16px / 1.5 (24px)</p>
+
+                <p class="text-specify">Уточняющий текст. <br>Идеи гедонизма занимают центральное место в утилитаризме Милля и Бентама, однако бабувизм естественно индуцирует гедонизм.</p>
+                <p class="ui-kit-desc">PT Sans Regular 16px / 1.5 (24px)</p>
+
+            </div>
+        </section>
+
+        <section id="base" class="section ui-kit-section">
+            <div class="container">
+
+                <h2 class="ui-kit-section__hl">
+                    <span class="ui-kit-section__hl-num">&nbsp;</span>
+                    Базовые стили и элементы
+                </h2>
+
+                <p class="ui-kit-section__desc">Настройка: base.pcss</p>
+
+                <p class="ui-kit-desc mb--">Параграф</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <br>
+
+                <p class="ui-kit-desc mb--">Знак рубля</p>
+                <p>Цена 123 <span class="rub">руб.</span></p>
+                <br>
+
+                <p class="ui-kit-desc mb--">Ссылка</p>
+                <p class="ui-kit-section__desc">Настройка: link.pcss</p>
+                <p><a href="">Ссылка</a></p>
+                <p><a class="link link--dotted" href="">Ссылка с подчеркиванием</a></p>
+                <p>
+                    <a href="" class="link link--dotted link--icon">
+                        <svg class="icon icon--load"><use xlink:href="#icon-load"></use></svg>
+                        <span class="link__dotted">
+                            Ссылка с подчеркиванием и иконкой
+                        </span>
+                    </a>
+                </p>
+                <br>
+
+                <p class="ui-kit-desc mb--">Fieldset</p>
+                <fieldset>
+                    <legend>Fieldset</legend>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste molestias quos eum labore, ipsum dolorum dolores culpa cupiditate nulla ex, eveniet sit reprehenderit, repellendus nemo suscipit, hic enim recusandae. Doloribus?
+                </fieldset>
+                <br>
+
+                <p class="ui-kit-desc mb--">Цитата</p>
+                <q>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi repudiandae quo voluptate beatae dolore, sed. Harum blanditiis, sit illum ut nulla quis similique quo ab sunt distinctio minus, vero natus?</q>
+                <br>
+                <br>
+
+                <p class="ui-kit-desc mb--">Линия</p>
+                <hr>
+                <br>
+
+                <p class="ui-kit-desc mb--">Тултип</p>
+                <p class="ui-kit-section__desc">Настройка: tooltip.pcss</p>
+
+                <p><span class="js-tooltip" title="Текст подсказки">Высплывающая подсказка по наведению</span></p>
+
+            </div>
+        </section>
+
+        <section id="tables" class="section ui-kit-section">
+            <div class="container">
+
+                <h2 class="ui-kit-section__hl">
+                    <span class="ui-kit-section__hl-num">&nbsp;</span>
+                    Таблицы
+                </h2>
+
+                <p class="ui-kit-section__desc">Настройка: table.pcss</p>
+
+                <p class="ui-kit-desc">Нестилезованная таблица</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Lorem ipsum</th>
+                            <th>Lorem ipsum</th>
+                            <th>Lorem ipsum</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>123</td>
+                            <td>Voluptatum nam, alias nobis fuga tempore beatae nostrum.</td>
+                            <td>Quidem fugit velit, inventore.</td>
+                        </tr>
+                        <tr>
+                            <td>456</td>
+                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                            <td>Eius consequuntur perferendis pariatur, at libero iste quam!</td>
+                        </tr>
+                        <tr>
+                            <td>789</td>
+                            <td>Sit delectus iure, ratione ipsam quo.</td>
+                            <td>Molestiae ipsa vitae, minus nobis in.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br><br>
+
+                <p class="ui-kit-desc">Стилезованная таблица</p>
+                <table class="table" width="100%">
+                    <thead>
+                        <tr>
+                            <th>Lorem ipsum</th>
+                            <th>Lorem ipsum</th>
+                            <th>Lorem ipsum</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>123</td>
+                            <td>Voluptatum nam, alias nobis fuga tempore beatae nostrum.</td>
+                            <td>Quidem fugit velit, inventore.</td>
+                        </tr>
+                        <tr>
+                            <td>456</td>
+                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                            <td>Eius consequuntur perferendis pariatur, at libero iste quam!</td>
+                        </tr>
+                        <tr>
+                            <td>789</td>
+                            <td>Sit delectus iure, ratione ipsam quo.</td>
+                            <td>Molestiae ipsa vitae, minus nobis in.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </section>
+
+        <section id="lists" class="section ui-kit-section">
+            <div class="container">
+
+                <h2 class="ui-kit-section__hl">
+                    <span class="ui-kit-section__hl-num">&nbsp;</span>
+                    Списки
+                </h2>
+
+                <p class="ui-kit-section__desc">Настройка: list.pcss</p>
+
+                <p class="ui-kit-desc">Маркированый список</p>
+                <ul class="ul-list">
+                    <li>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </li>
+                    <li>
+                        Corrupti blanditiis nesciunt nam ratione temporibus, architecto natus similique!
+                        <ul>
+                            <li>Fugiat quo sequi nam, consequuntur soluta atque labore blanditiis odio beatae pariatur totam minus.</li>
+                            <li>Voluptatum nam, alias nobis fuga tempore beatae nostrum.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Nisi vitae impedit incidunt id assumenda cum corporis qui possimus eius accusantium!
+                        <ol class="ol-list">
+                            <li>Fugiat quo sequi nam, consequuntur soluta atque labore blanditiis odio beatae pariatur totam minus.</li>
+                            <li>Voluptatum nam, alias nobis fuga tempore beatae nostrum.</li>
+                        </ol>
+                    </li>
+                </ul>
+
+                <p class="ui-kit-desc">Нумерованый список</p>
+                <ol class="ol-list">
+                    <li>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </li>
+                    <li>
+                        Corrupti blanditiis nesciunt nam ratione temporibus, architecto natus similique!
+                        <ol>
+                            <li>Fugiat quo sequi nam, consequuntur soluta atque labore blanditiis odio beatae pariatur totam minus.</li>
+                            <li>Voluptatum nam, alias nobis fuga tempore beatae nostrum.</li>
+                        </ol>
+                    </li>
+                    <li>
+                        Nisi vitae impedit incidunt id assumenda cum corporis qui possimus eius accusantium!
+                        <ul class="ul-list">
+                            <li>Fugiat quo sequi nam, consequuntur soluta atque labore blanditiis odio beatae pariatur totam minus.</li>
+                            <li>Voluptatum nam, alias nobis fuga tempore beatae nostrum.</li>
+                        </ul>
+                    </li>
+                </ol>
+
+            </div>
+        </section>
+
+        <section id="links" class="section ui-kit-section">
+            <div class="container">
+
+                <h2 class="ui-kit-section__hl">
+                    <span class="ui-kit-section__hl-num">&nbsp;</span>
+                    Ссылки
+                </h2>
+
+                <p class="ui-kit-section__desc">Можно использовать теги &lt;button&gt; и &lt;a&gt;, не использовать тег &lt;input&gt;<br>Настройка: link.pcss</p>
+
+                <p><a href="">Link</a></p>
+                <p>
+                    <a href="" class="link link--icon">
+                        <svg class="icon icon--load"><use xlink:href="#icon-load"></use></svg>
+                        Link with icon
+                    </a>
+                </p>
+                <p>
+                    <a href="" class="link link--icon">
+                        Link with icon
+                        <svg class="icon icon--load icon--right"><use xlink:href="#icon-load"></use></svg>
+                    </a>
+                </p>
+
+                <p>
+                    <a href="" class="link link--line-hover link--icon">
+                        <svg class="icon icon--load"><use xlink:href="#icon-load"></use></svg>
+                        <span class="link__line-hover">
+                            Link with icon underlined on hover
+                        </span>
+                    </a>
+                </p>
+                <p>
+                    <a href="" class="link link--line-hover link--icon">
+                        <span class="link__line-hover">
+                            Link with icon underlined on hover
+                        </span>
+                        <svg class="icon icon--load icon--right"><use xlink:href="#icon-load"></use></svg>
+                    </a>
+                </p>
+                <p><a class="link link--line" href="">Underlined link</a></p>
+                <p>
+                    <a href="" class="link link--line link--icon">
+                        <svg class="icon icon--load"><use xlink:href="#icon-load"></use></svg>
+                        <span class="link__line">
+                            Underlined link with icon
+                        </span>
+                    </a>
+                </p>
+                <p>
+                    <a href="" class="link link--line link--icon">
+                        <span class="link__line">
+                            Underlined link with icon
+                        </span>
+                        <svg class="icon icon--load icon--right"><use xlink:href="#icon-load"></use></svg>
+                    </a>
+                </p>
+                <p><a class="link link--dotted" href="">Dotted link</a></p>
+                <p>
+                    <a href="" class="link link--dotted link--icon">
+                        <svg class="icon icon--load"><use xlink:href="#icon-load"></use></svg>
+                        <span class="link__dotted">
+                            Dotted link with icon
+                        </span>
+                    </a>
+                </p>
+                <p>
+                    <a href="" class="link link--dotted link--icon">
+                        <span class="link__dotted">
+                            Dotted link with icon
+                        </span>
+                        <svg class="icon icon--load icon--right"><use xlink:href="#icon-load"></use></svg>
+                    </a>
+                </p>
+
+                <p><a class="link link--black" href="">Black link</a></p>
+                <p>
+                    <a class="link link--black" href="">
+                        <svg class="icon icon--load"><use xlink:href="#icon-load"></use></svg>
+                        Black link with icon
+                    </a>
+                </p>
+                <p><a class="link link--grey" href="">Grey link</a></p>
+                <p>
+                    <a class="link link--grey" href="">
+                        <svg class="icon icon--load"><use xlink:href="#icon-load"></use></svg>
+                        Grey link with icon
+                    </a>
+                </p>
+            </div>
+        </section>
+
+        <section id="buttons" class="section ui-kit-section">
+            <div class="container">
+
+                <h2 class="ui-kit-section__hl">
+                    <span class="ui-kit-section__hl-num">&nbsp;</span>
+                    Кнопки
+                </h2>
+
+                <p class="ui-kit-section__desc">Можно использовать теги &lt;button&gt; и &lt;a&gt;, не использовать тег &lt;input&gt;<br>Классы можно комбинировать, например .btn.btn--lg.btn--link<br>Настройка: buttons.pcss</p>
+
+                <div class="ui-kit-cols">
+                    <div class="ui-kit-cols__col">
+                        <p class="ui-kit-desc mb--">Primary large</p>
+                        <button class="btn btn--lg" type="button">Button</button>
+                        <a href="" class="btn btn--lg">Link</a>
+                    </div>
+                    <div class="ui-kit-cols__col">
+                        <p class="ui-kit-desc mb--">Primary large disabled</p>
+                        <button class="btn btn--lg" type="button" disabled>Button</button>
+                        <a href="" class="btn btn--lg is-disabled">Link</a>
+                    </div>
+                </div>
+                <br>
+
+                <div class="ui-kit-cols">
+                    <div class="ui-kit-cols__col">
+                        <p class="ui-kit-desc mb--">Primary medium (default)</p>
+                        <button class="btn" type="button">Button</button>
+                        <a href="" class="btn">Link</a>
+                    </div>
+                    <div class="ui-kit-cols__col">
+                        <p class="ui-kit-desc mb--">Primary medium disabled</p>
+                        <button class="btn" type="button" disabled>Button</button>
+                        <a href="" class="btn is-disabled">Link</a>
+                    </div>
+                </div>
+                <br>
+
+                <div class="ui-kit-cols">
+                    <div class="ui-kit-cols__col">
+                        <p class="ui-kit-desc mb--">Primary small</p>
+                        <button class="btn btn--sm" type="button">Button</button>
+                        <a href="" class="btn btn--sm">Link</a>
+                    </div>
+                    <div class="ui-kit-cols__col">
+                        <p class="ui-kit-desc mb--">Primary small disabled</p>
+                        <button class="btn btn--sm" type="button" disabled>Button</button>
+                        <a href="" class="btn btn--sm is-disabled">Link</a>
+                    </div>
+                </div>
+                <br>
+
+                <div class="ui-kit-cols">
+                    <div class="ui-kit-cols__col">
+                        <p class="ui-kit-desc mb--">With icons</p>
+                        <button class="btn" type="button">
+                            <svg class="icon icon--load"><use xlink:href="#icon-load"></use></svg>
+                            Button
+                        </button>
+                        <a href="" class="btn">
+                            <svg class="icon icon--load"><use xlink:href="#icon-load"></use></svg>
+                            Link
+                        </a>
+                        <br>
+                        <br>
+                        <button class="btn" type="button">
+                            Button
+                            <svg class="icon icon--load icon--right"><use xlink:href="#icon-load"></use></svg>
+                        </button>
+                        <a href="" class="btn">
+                            Link
+                            <svg class="icon icon--load icon--right"><use xlink:href="#icon-load"></use></svg>
+                        </a>
+                    </div>
+                    <div class="ui-kit-cols__col">
+                        <p class="ui-kit-desc mb--">With icons disabled</p>
+                        <button class="btn" type="button" disabled>
+                            <svg class="icon icon--load"><use xlink:href="#icon-load"></use></svg>
+                            Button
+                        </button>
+                        <a href="" class="btn is-disabled">
+                            <svg class="icon icon--load"><use xlink:href="#icon-load"></use></svg>
+                            Link
+                        </a>
+                        <br>
+                        <br>
+                        <button class="btn" type="button" disabled>
+                            Button
+                            <svg class="icon icon--load icon--right"><use xlink:href="#icon-load"></use></svg>
+                        </button>
+                        <a href="" class="btn is-disabled">
+                            Link
+                            <svg class="icon icon--load icon--right"><use xlink:href="#icon-load"></use></svg>
+                        </a>
+                    </div>
+                </div>
+                <br>
+
+                <p class="ui-kit-desc mb--">Блочные (на всю ширину)</p>
+                <button class="btn btn--block" type="button">Button block</button>
+                <br>
+
+                <p class="ui-kit-desc mb--">С обтеканием</p>
+                <button class="btn pull-left" type="button">Button left</button>
+                <button class="btn pull-right clear-no" type="button">Button right</button>
+                <br>
+                <div class="clear"></div>
+
+            </div>
+        </section>
+
+        <section id="tabs" class="section ui-kit-section">
+            <div class="container">
+
+                <h2 class="ui-kit-section__hl">
+                    <span class="ui-kit-section__hl-num">&nbsp;</span>
+                    Табы
+                </h2>
+
+                <p class="ui-kit-section__desc">Настройка: tabs.pcss <br>Можно открыть таб по клику на какой-то другой элемент. <br>Например: &lt;span data-tab-open="#tab-login"&gt;Open login tab&lt;/span&gt;</p>
+
+                <ul class="tabs js-tabs">
+                    <li class="tabs__item">
+                        <span class="tabs__link is-active js-tab-link">Tab Item</span>
+                        <div class="tabs__cnt">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt pellentesque lorem.Nullam imperdiet sapien id purus pretium id aliquam mi ullamcorper.</p>
+                        </div>
+                    </li>
+                    <li class="tabs__item">
+                        <span class="tabs__link js-tab-link">Another Tab</span>
+                        <div class="tabs__cnt">
+                            <p>Ut laoreet augue et neque pretium non sagittis nibh pulvinar. Etiam ornare tincidunt orci quis ultrices. Pellentesque ac sapien ac purus gravida ullamcorper. Duis rhoncus sodales lacus, vitae adipiscing tellus pharetra sed. Praesent bibendum lacus quis metus condimentum ac accumsan orci vulputate.</p>
+                        </div>
+                    </li>
+                    <li class="tabs__item">
+                        <span class="tabs__link js-tab-link">Third</span>
+                        <div class="tabs__cnt">
+                            <p>Donec mattis mauris gravida metus laoreet non rutrum sem viverra. Aenean nibh libero, viverra vel vestibulum in, porttitor ut sapien. Phasellus tempor lorem id justo ornare tincidunt. Nulla faucibus, purus eu placerat fermentum, velit mi iaculis nunc, bibendum tincidunt ipsum justo eu mauris. Nulla facilisi. Vestibulum vel lectus ac purus tempus suscipit nec sit amet eros. Nullam fringilla, enim eu lobortis dapibus, quam magna tincidunt nibh, sit amet imperdiet dolor justo congue turpis.</p>
+                        </div>
+                    </li>
+                    <li class="tabs__item">
+                        <span class="tabs__link js-tab-link">Last Item</span>
+                        <div class="tabs__cnt">
+                            <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus dui urna.</p>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+
+        <section id="popups" class="section ui-kit-section">
+            <div class="container">
+
+                <h2 class="ui-kit-section__hl">
+                    <span class="ui-kit-section__hl-num">&nbsp;</span>
+                    Попапы
+                </h2>
+
+                <p class="ui-kit-section__desc">
+                    Настройка: popups.js, popups.pcss <br>
+                    Вся информация по попапам и их настройке дана в popups.js <br><br>
+                    Попапы-дропдауны &lt; 768px становятся недоступны для вызова
+                </p>
+
+                <div class="ui-kit-cols">
+                    <div class="ui-kit-cols__col">
+                        <p class="ui-kit-desc">Типы попапов</p>
+                        <p><button type="button" data-href="#popup-template" class="link" data-popup="open">Дефолтный</button></p>
+                        <p><button type="button" data-href="#popup-template-wide" class="link" data-popup="open">Широкий</button></p>
+                        <p><button type="button" data-href="#popup-template-fullscreen" class="link" data-popup="open">Полноэкранный</button></p>
+                        <p><button type="button" data-href="#popup-template-foot" class="link" data-popup="open">С футером</button></p>
+                        <p><button type="button" data-href="#popup-template-aside-left" class="link" data-popup="open">Боковой слева, 100% с 768</button></p>
+                        <p><button type="button" data-href="#popup-template-aside-right" class="link" data-popup="open">Боковой справа, 100% с 768</button></p>
+                        <p><button type="button" data-href="#popup-template-fixed" class="link" data-popup="open">Фиксированный сверху без скрытия</button></p>
+                        <p><button type="button" data-href="#popup-template-fixed-auto" class="link" data-popup="open">Фиксированный сверху со скрытием через 5 секунд</button></p>
+                        <p><button type="button" data-href="#popup-template-text" class="link" data-popup="open">Текстовый</button></p>
+                        <p><a href="https://m.youtube.com/watch?v=j_YuFAMllXs" class="fancybox-media link">Попап с видео</a></p>
+                        <p id="popup-template-dropdown-left-container" style="position: relative;">
+                            <button type="button" data-href="#popup-template-dropdown-left" class="link" data-popup="open">По типу дропдауна слева</button>
+                        </p>
+                        <p id="popup-template-dropdown-center-container" class="text-c" style="position: relative;">
+                            <button type="button" data-href="#popup-template-dropdown-center" class="link" data-popup="open">По типу дропдауна по центру</button>
+                        </p>
+                        <p id="popup-template-dropdown-right-container" class="text-r" style="position: relative;">
+                            <button type="button" data-href="#popup-template-dropdown-right" class="link" data-popup="open">По типу дропдауна справа</button>
+                        </p>
+                        
+                    </div>
+                    <div class="ui-kit-cols__col">
+                        <p class="ui-kit-desc">Конкретные попапы</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="form" class="section ui-kit-section">
+            <div class="container">
+
+                <h2 class="ui-kit-section__hl">
+                    <span class="ui-kit-section__hl-num">&nbsp;</span>
+                    Форма
+                </h2>
+
+                <p class="ui-kit-section__desc">
+                    Валидация включается атрибутом data-validate="true" для формы <br>
+                    В валидируемых формах кнопка по умолчанию заблокирована и разблокируется только в случае если в форме нет ошибок и заполнены все обязательные поля (если другого не требует проект) <br>
+                    По умолчанию включены русский и английский язык для ошибок в форме. Язык ошибок зависит от атрибута lang &lt;html&gt; (ru-RU и en-US). <br>
+                    Документация валидатора: <a href="http://parsleyjs.org/doc/" target="_blank">parsleyjs.org</a> (прежде чем воротить что-то, читаем документацию) <br>
+                    Настройка: forms.pcss
+                </p>
+                <br>
+
+                <form name="validation-form" id="validation-form" action="" data-validate="true">
+                    <div class="field js-label-animation">
+                        <label for="validation-form__login">Заполненное поле с валидацией кол-ва символов от 5 до 20 *</label>
+                        <input id="validation-form__login" data-parsley-type="alphanum" type="text" name="validation-form__login" value="login_123" data-parsley-length="[5, 20]" required>
+                    </div>
+
+                    <div class="field js-label-animation">
+                        <label for="validation-form__name">Валидация имени (кириллица)</label>
+                        <input id="validation-form__name" type="text" name="validation-form__name" value="" data-parsley-name-ru>
+                    </div>
+
+
+                    <div class="ui-kit-cols">
+                        <div class="ui-kit-cols__col">
+                            <div class="field js-label-animation">
+                                <label for="validation-form__password">Пароль</label>
+                                <input id="validation-form__password" type="password" name="validation-form__password" value="" data-parsley-type="alphanum" data-parsley-length="[5, 20]" required autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="ui-kit-cols__col">
+                            <div class="field js-label-animation">
+                                <label for="validation-form__password-repeat">Повторите пароль</label>
+                                <input id="validation-form__password-repeat" type="password" name="validation-form__password-repeat" value="" data-parsley-equalto="#validation-form__password" required autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field js-label-animation">
+                        <label for="validation-form__email">Email</label>
+                        <input id="validation-form__email" type="email" name="validation-form__email" value="" data-parsley-email>
+                    </div>
+
+                    <div class="field js-label-animation">
+                        <label for="validation-form__tel">Телефон</label>
+                        <input id="validation-form__tel" class="js-phone-mask" type="tel" name="validation-form__tel" value="" data-parsley-phone>
+                    </div>
+
+                    <div class="field js-label-animation">
+                        <label for="validation-form__url">URL</label>
+                        <input id="validation-form__url" type="url" name="validation-form__url" value="">
+                    </div>
+
+                    <div class="field js-label-animation">
+                        <label for="validation-form__date">Дата</label>
+                        <input id="validation-form__date" class="js-datepicker" type="text" name="validation-form__date" value="" data-parsley-date data-date-min="01.04.2018" data-date-max="30.08.2018" readonly>
+                    </div>
+
+                    <label for="date-start">Диапазон дат</label>
+                    <div class="date-range">
+                        <div class="date-range__fields js-datepicker-range">
+                            <input id="date-range-from" class="datepicker js-range-from" type="text" name="validation-form__date-from" value="" readonly>
+                            <input id="date-range-to" class="datepicker js-range-to" type="text" name="validation-form__date-to" value="" readonly>
+                        </div>
+                    </div>
+
+                    <div class="ui-kit-cols">
+                        <div class="ui-kit-cols__col">
+                            <div class="field js-label-animation">
+                                <label for="validation-form__integer">Введите целое число между -255 и 255</label>
+                                <input type="number" name="validation-form__integer"  value="" id="validation-form__integer" data-parsley-min="-255" data-parsley-max="255">
+                            </div>
+                        </div>
+                        <div class="ui-kit-cols__col">
+                            <div class="field js-label-animation">
+                                <label for="validation-form__double">Введите число между 0 и 1</label>
+                                <input type="text" name="validation-form__double" value="" id="validation-form__double" pattern="(\d*\.)?\d+" data-parsley-range="[0, 1]">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ui-kit-cols">
+                        <div class="ui-kit-cols__col">
+                            <label for="validation-form__select1">Выберите любой вариант (поиск по вариантам включен)</label>
+                            <select name="validation-form__select1" id="validation-form__select1" data-search="true" data-placeholder="Выберите любой вариант" required>
+                                <option value=""></option>
+                                <option value="1">Яблоко</option>
+                                <option value="2">Банан</option>
+                                <option value="3">Апельсин</option>
+                                <option value="4">Клубника</option>
+                            </select>
+                        </div>
+                        <div class="ui-kit-cols__col">
+                            <label for="validation-form__select2">Выберите любой вариант (поиск по вариантам выключен)</label>
+                            <select name="validation-form__select2" id="validation-form__select2" data-search="false" data-placeholder="Выберите любой вариант">
+                                <option value=""></option>
+                                <option value="1">Картошка</option>
+                                <option value="2">Морковь</option>
+                                <option value="3">Свекла</option>
+                                <option value="4">Лук</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="field js-label-animation">
+                        <label for="validation-form__textarea">Напишите о себе (не более 100 символов)</label>
+                        <textarea name="validation-form__textarea" id="validation-form__textarea" rows="1" data-parsley-maxlength="100"></textarea>
+                    </div>
+
+                    <label>Слайдер диапазона</label>
+                    <div class="slider js-range">
+                        <div class="slider__range" data-min="0" data-max="100" data-step="1" data-values="10, 55"></div>
+                    </div>
+
+                    <label for="validation-form__file-choose">Загрузите файл размером до 100kb и только zip или png</label>
+                    <input type="file" name="validation-form__file-choose" value="" id="validation-form__file-choose" data-parsley-file-max-size="100" data-parsley-file-extension="zip, png" title="Прикрепите файл">
+
+                    <p class="label">Выберите от 1 до 3 вариантов:</p>
+                    <input type="checkbox" name="validation-form__check-group[]" id="validation-form__check-group-1" value="1" data-parsley-check="[1, 3]" required>
+                    <label for="validation-form__check-group-1">Вариант 1</label>
+
+                    <input type="checkbox" name="validation-form__check-group[]" id="validation-form__check-group-2" value="2">
+                    <label for="validation-form__check-group-2">Вариант 2</label>
+
+                    <input type="checkbox" name="validation-form__check-group[]" id="validation-form__check-group-3" value="3">
+                    <label for="validation-form__check-group-3">Вариант 3</label>
+
+                    <input type="checkbox" name="validation-form__check-group[]" id="validation-form__check-group-4" value="4">
+                    <label for="validation-form__check-group-4">Вариант 4</label>
+
+                    <input type="checkbox" name="validation-form__check-group[]" id="validation-form__check-group-5" value="5" disabled>
+                    <label for="validation-form__check-group-5">Вариант 5</label>
+
+                    <br>
+
+                    <p class="label">Выберите любой вариант:</p>
+                    <input type="radio" name="validation-form__check-group-radio[]" id="validation-form__check-group-radio-1" value="1" required>
+                    <label for="validation-form__check-group-radio-1">Вариант 1</label>
+
+                    <input type="radio" name="validation-form__check-group-radio[]" id="validation-form__check-group-radio-2" value="2">
+                    <label for="validation-form__check-group-radio-2">Вариант 2</label>
+
+                    <input type="radio" name="validation-form__check-group-radio[]" id="validation-form__check-group-radio-3" value="3">
+                    <label for="validation-form__check-group-radio-3">Вариант 3</label>
+
+                    <input type="radio" name="validation-form__check-group-radio[]" id="validation-form__check-group-radio-4" value="4">
+                    <label for="validation-form__check-group-radio-4">Вариант 4</label>
+
+                    <input type="radio" name="validation-form__check-group-radio[]" id="validation-form__check-group-radio-5" value="5" disabled>
+                    <label for="validation-form__check-group-radio-5">Вариант 5</label>
+
+                    <br>
+
+                    <input type="checkbox" name="validation-form__agree" id="validation-form__agree" value="1" required>
+                    <label for="validation-form__agree">Согласен с условиями</label>
+
+                    <button class="btn" type="submit">Отправить</button>
+                </form>
+
+            </div>
+        </section>
+
+
+        <section id="icons" class="section ui-kit-section">
+            <div class="container">
+
+                <h2 class="ui-kit-section__hl">
+                    <span class="ui-kit-section__hl-num">&nbsp;</span>
+                    Иконки
+                </h2>
+
+                <p class="ui-kit-section__desc">Все отдельные иконки делаются в icons.pcss отдельным блоком icon с модификатором конкретной иконки <br>Иконки в кнопках или других местах, где им нужно менять цвет, лучше делать через xlink <br>Настройка: icons.pcss</p>
+
+                <svg class="icon icon--load"><use xlink:href="#icon-load"></use></svg>
+                <span class="icon icon--load-static"></span>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer-main">
+        <div class="footer-main__top">
+            <a href="">Магазины</a>
+            <ul class="footer-main__social">
+                <li>Facebook</li>
+                <li>VK</li>
+                <li>Instagramm</li>
+                <li>Youtube</li>
+            </ul>
+            <p>Östra Varvsgatan 4 SE-211 75 Malmö Sweden</p>
+            <p>8 (800) 220-30-00</p>
+            <p>oplata@hilding-anders.ru</p>
+        </div>
+        <div class="footer-main__bottom">
+            <ul class="pay-types">
+                <li>MasterCard</li>
+                <li>Visa</li>
+                <li>PayPal</li>
+            </ul>
+            <p>© 2012–2017 Hilding Anders Group</p>
+            <p>Сделано в <a href="#">Greensight</a></p>
+        </div>
+    </footer>
+
+
+    <div id="popup-template" class="popup" data-animation="zoom" data-show-after="#popup-template-wide" style="display: none;">
+        <div class="popup__body">
+            <h2 class="popup__hl">Попап</h2>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur officiis nobis praesentium cumque, est atque quis quam illum nisi, veniam dicta aut debitis vero, necessitatibus qui id distinctio illo sequi!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In aspernatur ipsa tempora quis ducimus, aut, possimus illum eum! Ratione suscipit cum nostrum, iure quia laborum error quod vitae cupiditate aperiam.</p>
+
+            <button type="button" data-href="#popup-template-wide" class="link" data-popup="open" data-show-parent-after-close="true">Широкий попап (после закрытия откроется родительский)</button>
+            <button type="button" data-href="#popup-template-wide" class="link" data-popup="open">Широкий попап (после закрытия ничего не откроется)</button>
+
+            <button class="popup__close" data-popup="close" type="button" title="Закрыть">
+                <svg class="icon icon--cross"><use xlink:href="#icon-cross"></use></svg>
+            </button>
+        </div>
+    </div>
+
+    <div id="popup-template-wide" class="popup popup--wide" data-animation="zoom" style="display: none;">
+        <div class="popup__body">
+            <h2 class="popup__hl">Широкий попап</h2>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur officiis nobis praesentium cumque, est atque quis quam illum nisi, veniam dicta aut debitis vero, necessitatibus qui id distinctio illo sequi!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In aspernatur ipsa tempora quis ducimus, aut, possimus illum eum! Ratione suscipit cum nostrum, iure quia laborum error quod vitae cupiditate aperiam.</p>
+
+            <button class="popup__close" data-popup="close" type="button" title="Закрыть">
+                <svg class="icon icon--cross"><use xlink:href="#icon-cross"></use></svg>
+            </button>
+        </div>
+    </div>
+
+    <div id="popup-template-fullscreen" class="popup popup--fullscreen" data-fullscreen="true" data-wrap-class="fancybox-wrap--fullscreen" data-animation="zoom" style="display: none;">
+        <div class="popup__body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur officiis nobis praesentium cumque, est atque quis quam illum nisi, veniam dicta aut debitis vero, necessitatibus qui id distinctio illo sequi!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In aspernatur ipsa tempora quis ducimus, aut, possimus illum eum! Ratione suscipit cum nostrum, iure quia laborum error quod vitae cupiditate aperiam.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur officiis nobis praesentium cumque, est atque quis quam illum nisi, veniam dicta aut debitis vero, necessitatibus qui id distinctio illo sequi!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In aspernatur ipsa tempora quis ducimus, aut, possimus illum eum! Ratione suscipit cum nostrum, iure quia laborum error quod vitae cupiditate aperiam.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur officiis nobis praesentium cumque, est atque quis quam illum nisi, veniam dicta aut debitis vero, necessitatibus qui id distinctio illo sequi!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In aspernatur ipsa tempora quis ducimus, aut, possimus illum eum! Ratione suscipit cum nostrum, iure quia laborum error quod vitae cupiditate aperiam.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur officiis nobis praesentium cumque, est atque quis quam illum nisi, veniam dicta aut debitis vero, necessitatibus qui id distinctio illo sequi!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In aspernatur ipsa tempora quis ducimus, aut, possimus illum eum! Ratione suscipit cum nostrum, iure quia laborum error quod vitae cupiditate aperiam.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur officiis nobis praesentium cumque, est atque quis quam illum nisi, veniam dicta aut debitis vero, necessitatibus qui id distinctio illo sequi!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In aspernatur ipsa tempora quis ducimus, aut, possimus illum eum! Ratione suscipit cum nostrum, iure quia laborum error quod vitae cupiditate aperiam.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur officiis nobis praesentium cumque, est atque quis quam illum nisi, veniam dicta aut debitis vero, necessitatibus qui id distinctio illo sequi!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In aspernatur ipsa tempora quis ducimus, aut, possimus illum eum! Ratione suscipit cum nostrum, iure quia laborum error quod vitae cupiditate aperiam.</p>
+
+            <button class="popup__close" data-popup="close" type="button" title="Закрыть">
+                <svg class="icon icon--cross"><use xlink:href="#icon-cross"></use></svg>
+            </button>
+        </div>
+    </div>
+
+    <div id="popup-template-foot" class="popup" data-animation="zoom" style="display: none;">
+        <div class="popup__body">
+            <h2 class="popup__hl">С футером</h2>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur officiis nobis praesentium cumque, est atque quis quam illum nisi, veniam dicta aut debitis vero, necessitatibus qui id distinctio illo sequi!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In aspernatur ipsa tempora quis ducimus, aut, possimus illum eum! Ratione suscipit cum nostrum, iure quia laborum error quod vitae cupiditate aperiam.</p>
+
+            <button class="popup__close" data-popup="close" type="button" title="Закрыть">
+                <svg class="icon icon--cross"><use xlink:href="#icon-cross"></use></svg>
+            </button>
+        </div>
+
+        <div class="popup__footer">
+            Текст в футере
+        </div>
+    </div>
+
+    <div id="popup-template-aside-left" class="popup popup--aside popup--menu" data-aside="true" data-animation="push-left" data-time="400" data-wrap-class="fancybox-wrap--aside-left" style="display: none;">
+        <div class="popup__body">
+            <h2 class="popup__hl">Боковой слева, 100% с 768</h2>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur officiis nobis praesentium cumque, est atque quis quam illum nisi, veniam dicta aut debitis vero, necessitatibus qui id distinctio illo sequi!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In aspernatur ipsa tempora quis ducimus, aut, possimus illum eum! Ratione suscipit cum nostrum, iure quia laborum error quod vitae cupiditate aperiam.</p>
+
+            <button class="popup__close" data-popup="close" type="button" title="Закрыть">
+                <svg class="icon icon--cross"><use xlink:href="#icon-cross"></use></svg>
+            </button>
+        </div>
+    </div>
+
+    <div id="popup-template-aside-right" class="popup popup--aside" data-aside="true" data-animation="push-right" data-time="400" data-wrap-class="fancybox-wrap--aside-right" style="display: none;">
+        <div class="popup__body">
+            <h2 class="popup__hl">Боковой справа, 100% с 768</h2>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur officiis nobis praesentium cumque, est atque quis quam illum nisi, veniam dicta aut debitis vero, necessitatibus qui id distinctio illo sequi!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In aspernatur ipsa tempora quis ducimus, aut, possimus illum eum! Ratione suscipit cum nostrum, iure quia laborum error quod vitae cupiditate aperiam.</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur officiis nobis praesentium cumque, est atque quis quam illum nisi, veniam dicta aut debitis vero, necessitatibus qui id distinctio illo sequi!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In aspernatur ipsa tempora quis ducimus, aut, possimus illum eum! Ratione suscipit cum nostrum, iure quia laborum error quod vitae cupiditate aperiam.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur officiis nobis praesentium cumque, est atque quis quam illum nisi, veniam dicta aut debitis vero, necessitatibus qui id distinctio illo sequi!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In aspernatur ipsa tempora quis ducimus, aut, possimus illum eum! Ratione suscipit cum nostrum, iure quia laborum error quod vitae cupiditate aperiam.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur officiis nobis praesentium cumque, est atque quis quam illum nisi, veniam dicta aut debitis vero, necessitatibus qui id distinctio illo sequi!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In aspernatur ipsa tempora quis ducimus, aut, possimus illum eum! Ratione suscipit cum nostrum, iure quia laborum error quod vitae cupiditate aperiam.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur officiis nobis praesentium cumque, est atque quis quam illum nisi, veniam dicta aut debitis vero, necessitatibus qui id distinctio illo sequi!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In aspernatur ipsa tempora quis ducimus, aut, possimus illum eum! Ratione suscipit cum nostrum, iure quia laborum error quod vitae cupiditate aperiam.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur officiis nobis praesentium cumque, est atque quis quam illum nisi, veniam dicta aut debitis vero, necessitatibus qui id distinctio illo sequi!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In aspernatur ipsa tempora quis ducimus, aut, possimus illum eum! Ratione suscipit cum nostrum, iure quia laborum error quod vitae cupiditate aperiam.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur officiis nobis praesentium cumque, est atque quis quam illum nisi, veniam dicta aut debitis vero, necessitatibus qui id distinctio illo sequi!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In aspernatur ipsa tempora quis ducimus, aut, possimus illum eum! Ratione suscipit cum nostrum, iure quia laborum error quod vitae cupiditate aperiam.</p>
+
+            <button class="popup__close" data-popup="close" type="button" title="Закрыть">
+                <svg class="icon icon--cross"><use xlink:href="#icon-cross"></use></svg>
+            </button>
+        </div>
+    </div>
+
+    <div id="popup-template-fixed" class="popup popup--fixed" data-fixed="true" data-animation="push-top" data-wrap-class="fancybox-wrap--fixed" data-breakpoint="false" data-overlay="false" data-fixed-timeout="false" style="display: none;">
+        <div class="popup__body">
+            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur officiis nobis praesentium cumque, est atque quis quam illum nisi, veniam dicta aut debitis vero, necessitatibus qui id distinctio illo sequi!</p>
+
+            <button class="popup__close" data-popup="close" type="button" title="Закрыть">
+                <svg class="icon icon--cross"><use xlink:href="#icon-cross"></use></svg>
+            </button>
+        </div>
+    </div>
+
+    <div id="popup-template-fixed-auto" class="popup popup--fixed" data-fixed="true" data-animation="push-top" data-wrap-class="fancybox-wrap--fixed" data-breakpoint="false" data-overlay="false" style="display: none;">
+        <div class="popup__body">
+            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur officiis nobis praesentium cumque, est atque quis quam illum nisi, veniam dicta aut debitis vero, necessitatibus qui id distinctio illo sequi!</p>
+
+            <button class="popup__close" data-popup="close" type="button" title="Закрыть">
+                <svg class="icon icon--cross"><use xlink:href="#icon-cross"></use></svg>
+            </button>
+        </div>
+    </div>
+
+    <div id="popup-template-dropdown-left" class="popup popup--dropdown" data-dropdown="true" data-animation="zoom" data-wrap-class="fancybox-wrap--dropdown-left" data-breakpoint="false" data-parent="#popup-template-dropdown-left-container" style="display: none;">
+        <div class="popup__body">
+            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur officiis nobis praesentium cumque, est atque quis quam illum nisi, veniam dicta aut debitis vero, necessitatibus qui id distinctio illo sequi!</p>
+
+            <button class="popup__close" data-popup="close" type="button" title="Закрыть">
+                <svg class="icon icon--cross"><use xlink:href="#icon-cross"></use></svg>
+            </button>
+        </div>
+    </div>
+
+    <div id="popup-template-dropdown-center" class="popup popup--dropdown" data-dropdown="true" data-animation="zoom" data-wrap-class="fancybox-wrap--dropdown-center" data-breakpoint="false" data-parent="#popup-template-dropdown-center-container" style="display: none;">
+        <div class="popup__body">
+            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur officiis nobis praesentium cumque, est atque quis quam illum nisi, veniam dicta aut debitis vero, necessitatibus qui id distinctio illo sequi!</p>
+
+            <button class="popup__close" data-popup="close" type="button" title="Закрыть">
+                <svg class="icon icon--cross"><use xlink:href="#icon-cross"></use></svg>
+            </button>
+        </div>
+    </div>
+
+    <div id="popup-template-dropdown-right" class="popup popup--dropdown" data-dropdown="true" data-animation="zoom" data-wrap-class="fancybox-wrap--dropdown-right" data-breakpoint="false" data-parent="#popup-template-dropdown-right-container" style="display: none;">
+        <div class="popup__body">
+            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur officiis nobis praesentium cumque, est atque quis quam illum nisi, veniam dicta aut debitis vero, necessitatibus qui id distinctio illo sequi!</p>
+
+            <button class="popup__close" data-popup="close" type="button" title="Закрыть">
+                <svg class="icon icon--cross"><use xlink:href="#icon-cross"></use></svg>
+            </button>
+        </div>
+    </div>
+
+    <div id="popup-template-text" class="popup popup--wide popup--text" data-animation="zoom" style="display: none;">
+        <div class="popup__body popup__body--bordered">
+            <h2 class="popup__hl">Текстовый попап</h2>
+    
+            <h3>Подзаголовок</h3>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur officiis nobis praesentium cumque, est atque quis quam illum nisi, veniam dicta aut debitis vero, necessitatibus qui id distinctio illo sequi!</p>
+
+            <p><strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur officiis nobis praesentium cumque, est atque quis quam illum nisi, veniam dicta aut debitis vero, necessitatibus qui id distinctio illo sequi!</strong></p>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Head 1</th>
+                        <th>Head 2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-table-title="Head 1">Body 11</td>
+                        <td data-table-title="Head 2">Body 12</td>
+                    </tr>
+                    <tr>
+                        <td data-table-title="Head 1">Body 21</td>
+                        <td data-table-title="Head 2">Body 22</td>
+                    </tr>
+                    <tr>
+                        <td data-table-title="Head 1">Body 31</td>
+                        <td data-table-title="Head 2">Body 32</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <button class="popup__close" data-popup="close" type="button" title="Закрыть">
+                <svg class="icon icon--cross"><use xlink:href="#icon-cross"></use></svg>
+            </button>
+        </div>
+    </div>
+
+
+    <!-- Start ui kit sidebar -->
+    <!-- Этот сайдбар только для навигации в ките -->
+    <button class="ui-kit-sidebar-open js-open-ui-sidebar" title="Навигация по UI Kit"><span>Навигация по UI Kit</span></button>
+    <div class="ui-kit-sidebar js-ui-sidebar">
+        <div class="ui-kit-sidebar__content">
+            <button class="ui-kit-sidebar__close js-close-ui-sidebar" title="Закрыть"><svg class="icon icon--cross"><use xlink:href="#icon-cross"></use></svg></button>
+            <p class="ui-kit-sidebar__hl">UI Kit навигация</p>
+            <div class="ui-kit-sidebar__scroll">
+                <ul class="ul-list">
+                    <li><a href="#grid">Сетка</a></li>
+                    <li><a href="#colors">Основные цвета</a></li>
+                    <li><a href="#containers">Контейнеры контента</a></li>
+                    <li><a href="#fonts">Шрифты</a></li>
+                    <li><a href="#base">Базовые стили и элементы</a></li>
+                    <li><a href="#tables">Таблицы</a></li>
+                    <li><a href="#lists">Списки</a></li>
+                    <li><a href="#links">Ссылки</a></li>
+                    <li><a href="#buttons">Кнопки</a></li>
+                    <li><a href="#tabs">Табы</a></li>
+                    <li><a href="#popups">Попапы</a></li>
+                    <li><a href="#form">Форма</a></li>
+                    <li><a href="#icons">Иконки</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).on('click', '.js-open-ui-sidebar', function() {
+            $('.js-ui-sidebar').addClass('is-visible');
+        }).on('click', '.js-close-ui-sidebar', function() {
+            $('.js-ui-sidebar').removeClass('is-visible');
+        }).on('click', '.js-ui-sidebar a', function() {
+            $('.js-ui-sidebar').removeClass('is-visible');
+        });
+    </script>
+    <!-- /End ui kit sidebar -->
+
+
+    <script src="js/external.js" type="text/javascript"></script>
+    <script src="js/internal.js" type="text/javascript"></script>
+</body>
+</html>

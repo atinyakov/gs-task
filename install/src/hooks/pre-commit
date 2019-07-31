@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+EVENT=$(basename $0)
+DIR=$(dirname $0)/${EVENT}.d
+ESC_SEQ="\x1b["
+COL_RESET=$ESC_SEQ"39;49;00m"
+COL_GREEN=$ESC_SEQ"0;32m"
+
+for hook in ${DIR}/*.sh;
+do
+  bash ${hook}
+  if [ $? -ne 0 ]; then
+    exit 1
+  fi
+done
+
+echo ""
+printf "$COL_GREEN%s$COL_RESET\r\n\r\n" "All good"

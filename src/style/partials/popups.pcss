@@ -1,0 +1,469 @@
+/* Стилизация попапов (fancybox) */
+
+/*Избавляемся от ошибок в консоли */
+@media only screen  and (-webkit-min-device-pixel-ratio: 1.5),
+                    only screen and (min--moz-device-pixel-ratio: 1.5),
+                    only screen and (min-device-pixel-ratio: 1.5) {
+    #fancybox-loading,
+    .fancybox-close,
+    .fancybox-prev span,
+    .fancybox-next span,
+    #fancybox-loading div {
+        background-image: none;
+    }
+}
+
+#fancybox-loading,
+.fancybox-close,
+.fancybox-prev span,
+.fancybox-next span,
+#fancybox-loading div {
+    background-image: none;
+}
+
+
+.fancybox-lock {
+    overflow: visible !important;
+}
+
+.fancybox-overlay {
+    background: rgba($cl-global, .6);
+    z-index: 990;
+
+    .fancybox-lock & {
+        /* TODO: нефулскриновые попапы не скролятся на десктопе если не влезают по высоте */
+        overflow: hidden !important;
+        /* overflow-x: hidden !important; */
+    }
+
+    &.is-disabled {
+        display: none !important;
+    }
+}
+
+.fancybox-opened {
+    z-index: 992;
+
+    &.fancybox-wrap--aside-left {
+        left: 0 !important;
+    }
+
+    &.fancybox-wrap--aside-right {
+        left: auto !important;
+        right: 0 !important;
+    }
+
+    &.fancybox-wrap--fixed {
+        top: 0 !important;
+    }
+
+    &.fancybox-wrap--dropdown {
+        &-center {
+            top: 100% !important;
+            left: 50% !important;
+            transform: translateX(-50%);
+        }
+
+        &-left {
+            top: 100% !important;
+            left: 0 !important;
+            transform: none;
+        }
+
+        &-right {
+            top: 100% !important;
+            left: auto !important;
+            right: 0 !important;
+            transform: none;
+        }
+    }
+}
+
+    .fancybox-skin {
+        background: $cl-global-invert;
+        border-radius: 0;
+        color: $cl-global;
+        box-shadow: none;
+
+        &.zoom {
+            opacity: 0;
+            transform: scale(.7);
+            transition-duration: $time;
+
+            &.animated {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        &.push {
+            &-left,
+            &-right,
+            &-top {
+                opacity: 0;
+
+                &.animated {
+                    opacity: 1;
+                }
+            }
+
+            &-left,
+            &-right {
+                transition-duration: .4s;
+
+                &.animated {
+                    transform: translateX(0);
+                }
+            }
+
+            &-left {
+                transform: translateX(-100%);
+            }
+
+            &-right {
+                transform: translateX(100%);
+            }
+
+            &-top {
+                transform: translateY(-100%);
+                transition-duration: $time;
+
+                &.animated {
+                    transform: translateY(0);
+                }
+            }
+        }
+
+        .fancybox-wrap--fullscreen &,
+        .fancybox-wrap--aside-left &,
+        .fancybox-wrap--aside-right &,
+        .fancybox-wrap--fixed & {
+            border-radius: 0;
+        }
+
+        .fancybox-opened & {
+            box-shadow: 0 10px 30px 0 rgba($cl-global, .1);
+        }
+
+        .fancybox-opened.fancybox-wrap--fixed & {
+            box-shadow: 0 8px 48px 0 rgba($cl-global, .08);
+        }
+
+        .fancybox-opened.fancybox-wrap--dropdown-city &,
+        .fancybox-opened.fancybox-wrap--dropdown-cart & {
+            box-shadow: 0 8px 48px 0 rgba($cl-global, .16);
+        }
+
+        .fancybox-wrap--dropdown-center &,
+        .fancybox-wrap--dropdown-left &,
+        .fancybox-wrap--dropdown-right & {
+            border-radius: 4px;
+            margin-top: calc($gutter-step * 2);
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: calc(-$gutter-step * 2);
+                border: 8px solid transparent;
+                border-bottom-color: $cl-global-invert;
+                z-index: 2;
+            }
+        }
+
+        .fancybox-wrap--dropdown-center & {
+            &:before {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        .fancybox-wrap--dropdown-left & {
+            &:before {
+                left: calc($gutter-step * 4);
+            }
+        }
+
+        .fancybox-wrap--dropdown-right & {
+            &:before {
+                left: auto;
+                right: calc($gutter-step * 4);
+            }
+        }
+    }
+
+        .fancybox-inner {
+            @media (--tablet) {
+                display: flex;
+                align-items: stretch;
+            }
+
+            .fancybox-type-iframe & {
+                /* Фиксирует соотношение сторон 16:9 */
+                position: relative;
+                padding-bottom: 52%;
+                height: 0 !important;
+                overflow: hidden !important;
+
+                iframe,
+                object,
+                embed {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        .fancybox-close,
+        .fancybox-next span,
+        .fancybox-prev span {
+            background-size: auto auto;
+        }
+
+        .fancybox-close {
+            background: none;
+            background-size: cover;
+            top: $gutter-step;
+            right: calc(-$gutter-step * 5);
+            width: calc($gutter-step * 3);
+            height: calc($gutter-step * 3);
+            fill: $cl-global-invert;
+            transition: all $time ease;
+            z-index: 994;
+
+            &:hover {
+                fill: $cl-lg-grey;
+            }
+
+            [class*="--fullscreen"] &,
+            [class*="--aside-left"] &,
+            [class*="--aside-right"] &,
+            [class*="--dropdown"] &,
+            [class*="--fixed"] & {
+                display: none;
+            }
+
+            @media (--tablet-lg) {
+                display: none;
+                top: calc($gutter-step * 3);
+                right: calc($gutter-step * 3);
+                fill: $cl-global;
+
+                &:hover {
+                    fill: $cl-dk-grey;
+                }
+            }
+
+            @media (--tablet) {
+                width: calc($gutter-step * 2);
+                height: calc($gutter-step * 2);
+            }
+
+            .icon {
+                width: calc($gutter-step * 3);
+                height: calc($gutter-step * 3);
+
+                @media (--tablet) {
+                    width: calc($gutter-step * 2);
+                    height: calc($gutter-step * 2);
+                }
+            }
+        }
+
+        .fancybox-next,
+        .fancybox-prev {
+            span {
+
+            }
+
+            &:hover {
+                span {
+
+                }
+            }
+        }
+
+        .fancybox-prev {
+            span {
+
+            }
+
+            &:hover {
+                span {
+
+                }
+            }
+        }
+
+        .fancybox-next {
+            span {
+
+            }
+
+            &:hover {
+                span {
+
+                }
+            }
+        }
+
+.popup {
+    display: block;
+    position: relative;
+    width: 450px;
+
+    @media (--tablet) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    &--wide {
+        width: 650px;
+
+        @media (--tablet) {
+            width: 100%;
+        }
+    }
+
+    &--fullscreen,
+    &--fixed {
+        width: 100%;
+    }
+
+    &--aside {
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 450px;
+        height: 100%;
+
+        @media (--tablet) {
+            width: 100%;
+        }
+    }
+
+    &--dropdown {
+        width: 440px;
+        text-align: left;
+    }
+
+    &--text {
+        /* Здесь задаются стили для тегов и базовых классов, чтобы можно было вставлять контент из админки. */
+        h3 {
+            margin: calc($gutter-step * 4) 0 calc($gutter-step * 2);
+            font-weight: bold;
+        }
+
+        p {
+            margin: 0 0 calc($gutter-step * 3);
+        }
+
+        strong {
+            font-weight: bold;
+        }
+
+        .table {
+            margin-bottom: calc($gutter-step * 6);
+        }
+    }
+
+    &__close {
+        display: none;
+        position: absolute;
+        top: $gutter-step;
+        right: calc(-$gutter-step * 3);
+        width: calc($gutter-step * 3);
+        height: calc($gutter-step * 3);
+        fill: $cl-global-invert;
+        transition: all $time ease;
+        cursor: pointer;
+
+        &:hover {
+            fill: $cl-lg-grey;
+        }
+
+        [class*="--fullscreen"] &,
+        [class*="--aside-left"] &,
+        [class*="--aside-right"] &,
+        [class*="--dropdown"] &,
+        [class*="--fixed"] & {
+            display: block;
+            top: calc($gutter-step * 2);
+            right: calc($gutter-step * 2);
+            fill: $cl-global;
+
+            &:hover {
+                fill: $cl-dk-grey;
+            }
+        }
+
+        @media (--tablet-lg) {
+            display: block;
+            top: calc($gutter-step * 3);
+            right: calc($gutter-step * 3);
+            fill: $cl-global;
+
+            &:hover {
+                fill: $cl-dk-blue;
+            }
+        }
+
+        @media (--tablet) {
+            width: calc($gutter-step * 2);
+            height: calc($gutter-step * 2);
+        }
+
+        .icon {
+            width: calc($gutter-step * 3);
+            height: calc($gutter-step * 3);
+
+            @media (--tablet) {
+                width: calc($gutter-step * 2);
+                height: calc($gutter-step * 2);
+            }
+        }
+    }
+
+    &__body,
+    &__footer {
+        width: 100%;
+        padding: calc($gutter-step * 4) calc($gutter-step * 6);
+        @include clearfix;
+
+        @media (--mobile-lg) {
+            padding: calc($gutter-step * 4) calc($gutter-step * 3);
+        }
+    }
+
+    &__body {
+        @include clearfix;
+
+        @media (--tablet) {
+            flex-grow: 1;
+        }
+    }
+
+    &__footer {
+        background: $cl-lg-grey;
+        @include clearfix;
+
+        @media (--tablet) {
+            align-self: flex-end;
+            flex-grow: 0;
+            flex-shrink: 0;
+        }
+    }
+
+        &__hl {
+            font-size: 24px;
+
+            @media (--tablet) {
+                padding-right: calc($gutter-step * 4);
+            }
+        }
+}
