@@ -2855,7 +2855,7 @@ input[type="submit"] {
 @media (max-width: 1279px) {
 
     .store-address__map {
-            margin: 134px auto 0 31px;
+            margin: 134px auto 0 30px;
             width: 250px;
             height: 250px
     }
