@@ -10,6 +10,12 @@
     <!-- <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png"> -->
     <title>Blank</title>
 
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
+
+
     <link href="css/external.css" rel="stylesheet">
     <link href="css/internal.css" rel="stylesheet">
 
@@ -21,6 +27,7 @@
 
     <!-- Для ie10 -->
     <!--[if !IE]><!--><script>if(/*@cc_on!@*/false){document.documentElement.className+=' ie10';}</script><!--<![endif]-->
+
 </head>
 
 <body>
@@ -38,8 +45,24 @@
 
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0" style="position:absolute">
 	
+    		<symbol id="icon-arrow-next" viewBox="0 0 13.094 11.21">
+    			<path fill-rule="evenodd" d="M0 6.12v-1h12v1H0zm7.5 5.1l-.707-.7 5.606-5.61.707.71zM6.793.72L7.5.01l5.606 5.61-.707.7z"></path>
+    		</symbol>
+	
+    		<symbol id="icon-arrow-prev" viewBox="0 0 13 11">
+    			<path fill-rule="evenodd" d="M13 5.01v.98H1.086v-.98H13zM5.554-.01l.7.7L.687 6.2l-.7-.7zm.7 10.33l-.7.69L-.013 5.5l.7-.69z"></path>
+    		</symbol>
+	
+    		<symbol id="icon-badge" viewBox="0 0 55 48">
+    			<path fill-rule="evenodd" d="M38.943 13.38V7.96h-6.914a5.206 5.206 0 0 0 .751-2.7 5.28 5.28 0 0 0-10.56 0 5.2 5.2 0 0 0 .751 2.7h-6.914v5.42H0V48h55V13.38H38.943zM27.5 2.62a2.64 2.64 0 1 1-2.65 2.64 2.652 2.652 0 0 1 2.65-2.64zm-8.813 7.96h17.626v4.93H18.687v-4.93zm33.683 34.8H2.63V16h13.427v2.13h22.886V16H52.37v29.38zM18.219 29.44a4.8 4.8 0 0 0 1.132-3.1 4.863 4.863 0 1 0-8.527 3.18 7.618 7.618 0 0 0-3.953 6.67v4.07h15.446v-4.07a7.639 7.639 0 0 0-4.098-6.75zm-3.731-5.33a2.225 2.225 0 1 1-2.233 2.23 2.234 2.234 0 0 1 2.233-2.23zm5.2 13.53H9.5v-1.45a5.027 5.027 0 0 1 5.029-5.01h.128a5.027 5.027 0 0 1 5.029 5.01v1.45zm9.295-15.4h18.9v2.62h-18.9v-2.62zm0 7.14h18.9V32h-18.9v-2.62zm0 7.14h18.9v2.62h-18.9v-2.62z"></path>
+    		</symbol>
+	
     		<symbol id="icon-balance" viewBox="0 0 24 20.844">
     			<path fill-rule="evenodd" d="M15.74 9.379a4.139 4.139 0 0 0 7.05 2.89A4.04 4.04 0 0 0 24 9.379a.78.78 0 0 0-.12-.42l-2.59-4.277a.814.814 0 0 0 .51-.753 1.069 1.069 0 0 0-.8-1.085h-8v-2c0-1.114-2-1.114-2 0v2H3a1.069 1.069 0 0 0-.8 1.087.814.814 0 0 0 .51.753L.12 8.961a.782.782 0 0 0-.12.42 4.13 4.13 0 0 0 8.26 0 .782.782 0 0 0-.12-.42L5 4.844h6v14H6c-1.04 0-1.19 2-.16 2h12.32c1.03 0 .88-2-.16-2h-5v-14h6l-3.14 4.117a.782.782 0 0 0-.12.418zM4.13 11.832a2.481 2.481 0 0 1-2.34-1.635h4.67a2.468 2.468 0 0 1-2.33 1.634zm1.84-3.269H2.28l1.85-3.044zm13.9-3.044l1.85 3.044h-3.69zm2.34 4.679a2.492 2.492 0 0 1-4.68 0h4.68z"></path>
+    		</symbol>
+	
+    		<symbol id="icon-bed" viewBox="0 0 67 50">
+    			<path fill-rule="evenodd" d="M65.635 47.22h-1.409V31.34a5.236 5.236 0 0 0-5.177-5.28H21.456a5.682 5.682 0 0 0-11.216 1.4 5.931 5.931 0 0 0 .112 1.13l-3.413-.25c-.1 0-.194-.01-.29-.01a3.879 3.879 0 0 0-3.875 3.97v14.92H1.365a1.39 1.39 0 0 0 0 2.78h64.27a1.39 1.39 0 0 0 0-2.78zm-4.139-15.88V40H21.622V28.85h37.427a2.474 2.474 0 0 1 2.451 2.49zm-48.527-3.88a2.962 2.962 0 1 1 5.923 0v1.76l-5.608-.41a3.075 3.075 0 0 1-.315-1.35zM5.503 32.3a1.141 1.141 0 0 1 1.241-1.18l12.149.89v2.67H5.5V32.3zm0 5.16h13.39v3.93a1.385 1.385 0 0 0 1.364 1.4H61.5v4.43h-56v-9.76zm14.562-19.43a1.413 1.413 0 0 0 .38 1.22 1.337 1.337 0 0 0 1.2.38l3.9-.69a9.6 9.6 0 0 0 4.049.9 9.59 9.59 0 0 0 6.883-2.9 10.056 10.056 0 0 0 0-14.03 9.6 9.6 0 0 0-13.768 0 10.015 10.015 0 0 0-1.972 11.14zm4.578-13.16a6.915 6.915 0 0 1 9.907 0 7.24 7.24 0 0 1 0 10.1 6.9 6.9 0 0 1-8.174 1.29 1.374 1.374 0 0 0-.628-.15.915.915 0 0 0-.233.02l-2.43.43.421-2.48a1.423 1.423 0 0 0-.133-.88 7.217 7.217 0 0 1 1.27-8.33zm1.9 6.35l1.968-2.16h-.969a1.39 1.39 0 0 1 0-2.78h4.137c.025 0 .049.01.074.01h.063a.166.166 0 0 0 .069.01c.021.01.043.01.065.02a.159.159 0 0 1 .064.02 14.753 14.753 0 0 1 .127.04l.06.03a.15.15 0 0 1 .062.02.2.2 0 0 0 .057.04l.058.03c.019.01.038.03.056.04s.035.03.052.04.038.03.056.05.019.01.029.02a.035.035 0 0 0 .017.02.261.261 0 0 0 .05.05.252.252 0 0 0 .044.05.249.249 0 0 0 .04.05l.043.06a.216.216 0 0 0 .032.05c.013.02.026.05.038.07s.018.03.028.05.021.05.03.07l.024.06.023.06c.007.02.012.05.018.07s.012.04.016.06l.012.07.011.07c.003.02 0 .04 0 .06V7.79c0 .03 0 .04-.006.06s-.007.05-.011.07l-.013.07c-.005.03-.011.04-.017.06s-.012.05-.02.07l-.022.06-.026.06-.029.06-.032.06-.034.06-.04.06c-.012.02-.024.03-.037.05s-.032.04-.048.06l-.024.03-1.968 2.16h.968a1.39 1.39 0 0 1 0 2.78h-4.1a.588.588 0 0 1-.132-.01h-.049c-.027-.01-.054-.01-.081-.02s-.037-.01-.055-.01-.048-.01-.072-.02a.123.123 0 0 1-.055-.02c-.023-.01-.046-.01-.068-.02l-.053-.03-.065-.03-.051-.03a.2.2 0 0 1-.061-.04l-.051-.03c-.018-.01-.037-.03-.055-.04s-.033-.03-.05-.05-.021-.01-.031-.02-.011-.01-.017-.02a.261.261 0 0 0-.05-.05.252.252 0 0 0-.044-.05.249.249 0 0 0-.04-.05l-.043-.06a.216.216 0 0 0-.032-.05c-.013-.02-.026-.05-.038-.07a.189.189 0 0 1-.028-.05.4.4 0 0 1-.03-.07l-.024-.06-.023-.06c-.007-.02-.012-.05-.018-.07s-.012-.04-.016-.06l-.012-.07-.011-.07c-.003-.02 0-.04 0-.06v-.08-.02-.04-.08c0-.03 0-.04.006-.06s.007-.05.011-.07l.013-.07c.005-.03.011-.04.017-.06l.02-.07c.008-.03.014-.04.022-.06l.026-.06.029-.06.032-.06.034-.06.04-.06c.012-.02.024-.03.037-.05l.049-.06a.3.3 0 0 1 .029-.03z"></path>
     		</symbol>
 	
     		<symbol id="icon-cart" viewBox="0 0 23 21">
@@ -50,12 +73,32 @@
     			<path fill-rule="evenodd" d="M26.993 25.483l-1.416 1.415L13.546 14.87 1.515 26.898.1 25.483l12.031-12.028L.1 1.428 1.515.013l12.031 12.028L25.577.013l1.416 1.415-12.031 12.027 12.031 12.028z"></path>
     		</symbol>
 	
+    		<symbol id="icon-divan" viewBox="0 0 61 41">
+    			<path fill-rule="evenodd" d="M60 22V0H1v23a13.516 13.516 0 0 0-1 6.21c0 2.86 2.193 6.88 4.872 6.71L5 41h3v-5h45v5h3v-5c2.755-.55 5-3.93 5-6.79 0-2.08-.285-6.18-1-7.21zM57 3v18h-8V8H12v13H4V3h53zm-11 8v10H32V11h14zm-17 0v10H15V11h14zm27 22H5c-.875.02-1.763-3.73-1.753-5.42.009-1.61.284-3.46 1.753-3.58h51c1.468.12 1.751 2.93 1.751 4.4 0 1.55-.169 4.6-1.751 4.6z"></path>
+    		</symbol>
+	
+    		<symbol id="icon-ellipse" viewBox="0 0 63 63">
+    			<defs><style>.cls-1{fill:none;stroke:#000;stroke-width:3px}</style></defs><circle fill="none" stroke-width="3" class="cls-1" cx="31.5" cy="31.5" r="30"></circle>
+    		</symbol>
+	
+    		<symbol id="icon-exibition" viewBox="0 0 51 50">
+    			<path fill-rule="evenodd" d="M49.513 0H1.487A1.491 1.491 0 0 0 0 1.49v47.02A1.491 1.491 0 0 0 1.487 50h27.319a1.485 1.485 0 1 0 0-2.97H2.974V25.37h11.739v8.25a1.487 1.487 0 1 0 2.974 0V14.49a1.487 1.487 0 1 0-2.974 0v7.91H2.974V2.97h27.345v10.62a1.491 1.491 0 0 0 1.487 1.49h9.725a1.49 1.49 0 0 0 0-2.98h-8.239V2.97h14.734v30.17h-13.22a1.485 1.485 0 1 0 0 2.97h13.22v10.92h-9.5a1.485 1.485 0 1 0 0 2.97h10.982a1.491 1.491 0 0 0 1.487-1.49V1.49A1.49 1.49 0 0 0 49.513 0z"></path>
+    		</symbol>
+	
     		<symbol id="icon-hamburger" viewBox="0 0 36 24">
     			<path fill-rule="evenodd" d="M0 11h36v2H0v-2zM0 0h36v2H0V0zm0 22h36v2H0v-2z"></path>
     		</symbol>
 	
     		<symbol id="icon-load" viewBox="0 0 24 24">
     			<path d="M23.532 8.68A12.024 12.024 0 0 0 16.553.9a12.086 12.086 0 0 0-4.539-.9v1.47a10.508 10.508 0 0 1 7.451 3.06 10.353 10.353 0 0 1 2.663 4.52 10.471 10.471 0 0 1 .184 5.19 10.275 10.275 0 0 1-2.336 4.64l-2.046-2.01v4.99l5.1.08-2.046-2.04a11.937 11.937 0 0 0 2.548-11.22zM1.86 14.96a10.477 10.477 0 0 1-.171-5.19 10.333 10.333 0 0 1 2.349-4.65l2.046 2.03V2.13l-5.1-.05L3.018 4.1a11.951 11.951 0 0 0 4.433 18.99 11.991 11.991 0 0 0 4.566.91v-1.44a10.609 10.609 0 0 1-10.157-7.6z"></path>
+    		</symbol>
+	
+    		<symbol id="icon-magnifier" viewBox="0 0 57 58">
+    			<path fill-rule="evenodd" d="M55.657 0H9.505a1.34 1.34 0 0 0-1.343 1.33v40.68l-6.889 6.85a4.35 4.35 0 0 0 6.172 6.13l.717-.71v2.39A1.339 1.339 0 0 0 9.505 58H44.6a1.347 1.347 0 0 0 .949-.39l11.058-10.99a1.334 1.334 0 0 0 .394-.95V1.33A1.339 1.339 0 0 0 55.657 0zM5.546 53.1a1.689 1.689 0 0 1-2.374 0 1.665 1.665 0 0 1 0-2.36l12.866-12.78 2.373 2.35zm40.393.35L45.933 47l6.485.01zm8.376-9.11l-9.725-.01a1.347 1.347 0 0 0-.949.39 1.328 1.328 0 0 0-.394.94l.009 9.67H10.848v-3.72L21.26 41.26a1.333 1.333 0 0 0 0-1.89l-1.228-1.22 2.567-2.55a15.791 15.791 0 1 0-5.728-12.14 15.675 15.675 0 0 0 3.818 10.26l-2.556 2.54-1.146-1.14a1.351 1.351 0 0 0-1.9 0l-4.24 4.22V2.67h43.467v41.67zM19.557 23.46A13.226 13.226 0 1 1 32.783 36.6a13.2 13.2 0 0 1-13.226-13.14zm20.812-1.27H25.33a1.335 1.335 0 1 0 0 2.67h15.039a1.335 1.335 0 1 0 0-2.67zm0 5.2H25.33a1.335 1.335 0 1 0 0 2.67h15.039a1.335 1.335 0 1 0 0-2.67zm-9-10.54H25.33a1.335 1.335 0 1 0 0 2.67h6.043a1.335 1.335 0 1 0 0-2.67zm4.834 0H35.4a1.335 1.335 0 1 0 0 2.67h.806a1.335 1.335 0 1 0 .001-2.67z"></path>
+    		</symbol>
+	
+    		<symbol id="icon-percent" viewBox="0 0 63 63">
+    			<text font-family="geometria" data-name="%" transform="translate(8 50) scale(3.536)">%</text><circle fill="none" stroke-width="3" class="cls-1" cx="31.5" cy="31.5" r="30"></circle>
     		</symbol>
 	
     		<symbol id="icon-star" viewBox="0 0 23 22">
@@ -131,116 +174,171 @@
     </header>
 
     <main class="wrap-main">
-
-        <section class="banner">
-            <h1 class="banner__header">Флагманский  магазин</h1>
-            <p class="banner__description">Самый большой салон Hilding Anders в России  в самом центре Москвы</p>        
-        </section>
-
         <section class="store">
-            <article>
-                <section class="store-address">
-                    <div class="store-address__descrition">
-                        <h3 class="store-address__header">Адрес</h2>
-                        <p class="store-address__address">
-                            Москва, 2-я Тверская-Ямская ул.,  д.2,<br>
-                            <sub>м.</sub>Белорусская<br>
-                        </p>
-                        <p class="store-address__contacts">
-                            +7 495 123 45 67<br>
-                            с 10.00 до 00.00 ежедневно
-                        </p>
-                    </div>
-                    <img class="store-address__map" src="img/map.png" alt="карта" width="274" height="275">
-                </section>
-        
-                <section class="for-visitors">
-                    <h3 class="for-visitors__header">Для посетителей</h2>
-                    <p class="for-visitors__description">Приглашаем вас посетить флагманский салон  Hilding Anders в России.<br> Вас ждут:</p>
-                    <ul class="for-visitors__list">
-                        <li class="for-visitors__list-item for-visitors__list-item--delivery">Специальные условия покупки<br> и доставки</li>
-                        <li class="for-visitors__list-item for-visitors__list-item--unique">Уникальные товары, которых<br> нет в других салонах</li>
-                        <li class="for-visitors__list-item for-visitors__list-item--expo">Самая большая выставка<br> продукции Hilding Anders </li>
-                        <li class="for-visitors__list-item for-visitors__list-item--testing">Бесплатное тестирование<br> товаров</li>
-                        <li class="for-visitors__list-item for-visitors__list-item--design">Услуги дизайнера интерьера<br> и личного менеджера-консультанта</li>
-                        <li class="for-visitors__list-item for-visitors__list-item--sale">Специальные скидки и акции</li>
-                    </ul>
-                </section>
-            </article>
-            <aside class="form">
-                <h3 class="form__header">Отправить заявку</h2>
-                <p class="form__description">Хотите заказать специальные услуги во флагмане или задать вопрос? Заполните форму, и мы ответим Вам в ближайшее время.</p>
-                <form class="form__form forms" action="#" method="post">
-                    <label class="form__label" for="name">Имя</label>
-                    <input class="form__input" id="name" type="name" name="">
+            <section class="store__main">
+                <h1 class="store__main-header">Флагманский  магазин</h1>
+                <p class="store__main-description">Самый большой салон Hilding Anders в России  в самом центре Москвы</p>
 
-                    <ul class="form__list">
-                        <li class="form__list-item">
-                            <label class="form__label" for="email">Email</label>
-                            <input class="form__input" id="email" type="email" name="">
-                        </li>
-                        <li class="form__list-item">
-                            <label class="form__label" for="tel">Телефон</label>
-                            <input class="form__input" id="tel" type="tel" name="">                         
-                        </li>
-                        <li class="form__list-item">
-                            <label class="form__label" for="date">Дата визита</label>
-                            <input class="form__input" id="date" type="date" name="">
-                        </li>
-                        <li class="form__list-item">
-                            <label class="form__label" for="time">Время визита</label>
-                            <input class="form__input" id="time" type="time" name="">
-                        </li>
-                    </ul>
+                <picture>
+                    <img src="/img/bed-zone.jpg" alt="Зона кроватей" height="401" width="1600">
+                </picture>
+            </section>
+            <div class="store__descripton-wrapper">
+                <section class="store__description">
+                    <section class="store-address">
+                        <div class="store-address__details">
+                            <h3 class="store-address__header">Адрес</h2>
+                            <p class="store-address__address">
+                                Москва, 2-я Тверская-Ямская ул.,  д.2,<br>
+                                <sub>м.</sub>Белорусская<br>
+                            </p>
+                            <p class="store-address__contacts">
+                                <a class="store-address__tel" href="tel:+74951234567">+7 495 123 45 67</a><br>
+                                с 10.00 до 00.00 ежедневно
+                            </p>
+                        </div>
+                        <img class="store-address__map" src="img/map.png" alt="карта" width="274" height="275">
+                    </section>
+                    
+                    <section class="for-visitors">
+                        <h3 class="for-visitors__header">Для посетителей</h2>
+                        <p class="for-visitors__description">Приглашаем вас посетить флагманский салон  Hilding Anders в России.<br> Вас ждут:</p>
+                        <ul class="for-visitors__list">
+                            <li class="for-visitors__list-item for-visitors__list-item--delivery">
+                                <svg width="57" height="58">
+                                    <use xlink:href="#icon-magnifier"></use>
+                                </svg>
+                                <span>Специальные условия покупки<br> и доставки</span>
+                            </li>
+                            <li class="for-visitors__list-item for-visitors__list-item--unique">
+                                <svg width="61" height="41">
+                                    <use xlink:href="#icon-divan"></use>
+                                </svg>
+                                <span>Уникальные товары, которых<br> нет в других салонах</span>
+                            </li>
+                            <li class="for-visitors__list-item for-visitors__list-item--expo">
+                                <svg width="51" height="50">
+                                    <use xlink:href="#icon-exibition"></use>
+                                </svg>
+                                <span>Самая большая выставка<br> продукции Hilding Anders</span>
+                            </li>
+                            <li class="for-visitors__list-item for-visitors__list-item--testing">
+                                <svg width="67" height="50">
+                                    <use xlink:href="#icon-bed"></use>
+                                </svg>
+                                <span>Бесплатное тестирование<br> товаров</span>
+                            </li>
+                            <li class="for-visitors__list-item for-visitors__list-item--design">
+                                <svg width="55" height="48">
+                                    <use xlink:href="#icon-badge"></use>
+                                </svg>
+                                <span>Услуги дизайнера интерьера<br> и личного менеджера-консультанта</span>
+                            </li>
+                            <li class="for-visitors__list-item for-visitors__list-item--sale">
+                                <svg width="63" height="63">
+                                    <use xlink:href="#icon-percent"></use>
+                                </svg>
+                                <span>Специальные скидки и акции</span>
+                            </li>
+                        </ul>
+                    </section>
+                </section>
 
-                    <label class="form__label" for="comment">Комментарий</label>
-                    <textarea class="form__textarea" name="comment" id="comment" cols="30" rows="3"></textarea>
-                </form>
-                <button class="form__btn btn" type="submit">Отправить</button>
-            </aside>
+                <section class="form">
+                    <h3 class="form__header">Отправить заявку</h2>
+                    <p class="form__description">Хотите заказать специальные услуги во флагмане или задать вопрос? Заполните форму, и мы ответим Вам в ближайшее время.</p>
+                    <form class="form__form forms" action="#" method="post">
+                        <label class="form__label" for="name">Имя</label>
+                        <input class="form__input" id="name" type="name" name="">
+    
+                        <ul class="form__list form__list--top">
+                            <li class="form__list-item">
+                                <label class="form__label" for="email">Email</label>
+                                <input class="form__input" id="email" type="email" name="">
+                            </li>
+                            <li class="form__list-item">
+                                <label class="form__label" for="tel">Телефон</label>
+                                <input class="form__input" id="tel" type="tel" name="">                         
+                            </li>
+                        </ul>
+                        <ul class="form__list">
+                            <li class="form__list-item">
+                                <label class="form__label" for="date">Дата визита</label>
+                                <input id="validation-form__date" class="js-datepicker" type="text" name="validation-form__date" value="" data-parsley-date data-date-min="01.04.2018" data-date-max="30.08.2018">
+                            </li>
+                            <li class="form__list-item">
+                                <label class="form__label" for="time">Время визита</label>
+                                <input class="form__input" id="time" type="text" name="">
+                            </li>
+                        </ul>
+    
+                        <label class="form__label" for="comment">Комментарий</label>
+                        <textarea class="form__textarea" name="comment" id="comment" cols="30" rows="3"></textarea>
+
+                        <ul class="form__checkbox">
+                            <li class="form__checkbox-item">
+                                <input type="checkbox" name="validation-form__check-group-checkbox[]" id="validation-form__check-group-checkbox-1" value="1" checked>
+                                <label for="validation-form__check-group-checkbox-1">Заказ дизайнера</label>
+                            </li>
+                            <li class="form__checkbox-item">
+                                <input type="checkbox" name="validation-form__check-group-checkbox[]" id="validation-form__check-group-checkbox-2" value="2">
+                                <label for="validation-form__check-group-checkbox-2">Заказ личного менеджера</label>
+                            </li>
+                            <li class="form__checkbox-item">
+                                <input type="checkbox" name="validation-form__check-group-checkbox[]" id="validation-form__check-group-checkbox-3" value="3">
+                                <label for="validation-form__check-group-checkbox-3">Заказ замерщика</label>
+                            </li>
+                            <li class="form__checkbox-item">
+                                <input type="checkbox" name="validation-form__check-group-checkbox[]" id="validation-form__check-group-checkbox-4" value="4">
+                                <label for="validation-form__check-group-checkbox-4">Заказ кредитного специалиста</label>
+                            </li>
+                        </ul>
+                    </form>
+                    <button class="form__btn btn" type="submit">Отправить</button>
+                </section>
+            </div>
         </section>
 
         <section class="slider">
             <div class="carousel">
-                    <div class=""><img src="/img/slides/7biko.jpg" alt=""></div>
-                    <div class=""><img src="/img/slides/5reception.jpg" alt=""></div>
-                    <div class=""><img src="/img/slides/interior.jpg" alt=""></div>
-                    <div class=""><img src="/img/slides/11access.jpg" alt=""></div>
-                    <div class=""><img src="/img/slides/13ensen.jpg" alt=""></div>
-                    <div class=""><img src="/img/slides/beds.jpg" alt=""></div>
-                    <div class=""><img src="/img/slides/room.jpg" alt=""></div>
-                    <div class=""><img src="/img/slides/9arzone.jpg" alt=""></div>
+                <div class=""><img src="/img/slides/7biko.jpg" alt="" height="320" width="392"></div>
+                <div class=""><img src="/img/slides/5reception.jpg" alt="" height="320"  width="312"></div>
+                <div class=""><img src="/img/slides/interior.jpg" alt="" height="320" width="481"></div>
+                <div class=""><img src="/img/slides/11access.jpg" alt="" height="320"widtht="344"></div>
+                <div class=""><img src="/img/slides/13ensen.jpg" alt="" height="320" width="313"></div>
+                <div class=""><img src="/img/slides/beds.jpg" alt="" height="320" width="479"></div>
+                <div class=""><img src="/img/slides/room.jpg" alt="" height="320" width="480"></div>
+                <div class=""><img src="/img/slides/9arzone.jpg" alt="" height="320" width="256"></div>
 
-<!-- 
-                    <div class="slider__item">
-                        <img src="/img/slides/7biko.jpg" alt="">
-                        <img src="/img/slides/5reception.jpg" alt="">
-                        <img src="/img/slides/interior.jpg" alt="">
-                        <img src="/img/slides/11access.jpg" alt="">
-                    </div>
-                    <div class="slider__item">
-                        <img src="/img/slides/13ensen.jpg" alt="">
-                        <img src="/img/slides/beds.jpg" alt="">
-                        <img src="/img/slides/room.jpg" alt="">
-                        <img src="/img/slides/9arzone.jpg" alt="">
-                    </div> -->
+                <div class=""><img src="/img/slides/7biko.jpg" alt="" height="320" width="392"></div>
+                <div class=""><img src="/img/slides/5reception.jpg" alt="" height="320"  width="312"></div>
+                <div class=""><img src="/img/slides/interior.jpg" alt="" height="320" width="481"></div>
+                <div class=""><img src="/img/slides/11access.jpg" alt="" height="320"widtht="344"></div>
+                <div class=""><img src="/img/slides/13ensen.jpg" alt="" height="320" width="313"></div>
+                <div class=""><img src="/img/slides/beds.jpg" alt="" height="320" width="479"></div>
+                <div class=""><img src="/img/slides/room.jpg" alt="" height="320" width="480"></div>
+                <div class=""><img src="/img/slides/9arzone.jpg" alt="" height="320" width="256"></div>
             </div>
         </section>
 
         <section class="news">
-            <h2>Новости флагмана</h2>
-            <ul class="news__list ul-list">
+            <h2 class="news__header">Новости флагмана</h2>
+            <ul class="news__list">
                 <li class="news__list-item">
                     <img src="img/news-item-1.jpg" alt="Бант" width="279" height="309">
-                    <p>20 января 2017</p>
-                    <h3>Торжественное открытие флагманского  магазина</h3>
-                    <p>Комфортное место для сна – залог отличного самочувствия, ведь полноценный отдых необходим каждому. А создать комфорт для сна помогут удобные матрасы и подушки, которые можно будет купить в магазине Hilding Anders, который уже совсем скоро откроется в ТРЦ «Хорошо!».</p>
+                    <div>
+                        <p>20 января 2017</p>
+                        <h3>Торжественное открытие флагманского  магазина</h3>
+                        <p>Комфортное место для сна – залог отличного самочувствия, ведь полноценный отдых необходим каждому. А создать комфорт для сна помогут удобные матрасы и подушки, которые можно будет купить в магазине Hilding Anders, который уже совсем скоро откроется в ТРЦ «Хорошо!».</p>    
+                    </div>
                 </li>
                 <li class="news__list-item">
                     <img src="img/news-item-2.jpg" alt="Зона Hilding" width="272" height="309">
-                    <p>12 апреля 2017</p>
-                    <h3>Новые коллекции матрасов Hilding Anders</h3>
-                    <p>В салоне представлены самые известные и лучшие матрасы со всего мира – надежный и практичный Hilding, романтичный Andre Renault, швейцарский BicoFlex, уникальный Jensen. У нас вы найдете коллекцию интерьерных кроватей и эксклюзивных спальных систем из рогожки.</p>
+                    <div>
+                        <p>12 апреля 2017</p>
+                        <h3>Новые коллекции матрасов Hilding Anders</h3>
+                        <p>В салоне представлены самые известные и лучшие матрасы со всего мира – надежный и практичный Hilding, романтичный Andre Renault, швейцарский BicoFlex, уникальный Jensen. У нас вы найдете коллекцию интерьерных кроватей и эксклюзивных спальных систем из рогожки.</p>    
+                    </div>
                 </li>
             </ul>
         </section>
