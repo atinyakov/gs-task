@@ -2682,8 +2682,8 @@ input[type="submit"] {
 @media (max-width: 1279px) {
 
 .menu {
+        width: 1024px
 }
-        
     }
 
 @media (max-width: 1023px) {
