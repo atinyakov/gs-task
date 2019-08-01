@@ -1,15 +1,26 @@
 .store-address {
     font-size: 16px;
     display: flex;
+    padding-left: 117px;
+
+    @media (--desktop-lg) {
+        padding-left: 79px;
+    }
+
+    
+     @media (--desktop) {
+        padding-left: 27px;
+    }
 
     &__address {
-        padding: 43px 0 0 117px;
-        line-height: 23px;
+        padding-top: 43px;
+        line-height: 1.5;
     }
 
     &__header {
         font-size: 40px;
-        padding: 74px 0 0 119px;
+        padding-top: 74px;
+        margin: 0 auto;
     }
 
     &__phone {
@@ -17,13 +28,26 @@
     }
 
     &__map {
-        margin: 57px 74px 0 auto;
+        margin: 55px auto 0 134px;
         width: 349px;
         height: 353px;
+
+        @media (--desktop-lg) {
+            margin: 104px auto 0 42px;
+            width: 280px;
+            height: 280px;
+        }   
+
+
+        @media (--desktop) {
+            margin: 134px auto 0 31px;
+            width: 250px;
+            height: 250px;
+        }
     }
 
     &__contacts {
-        padding: 20px 0 0 148px;
-        line-height: 32px;
+        padding-top: 20px;
+        line-height: 2;
     }
 }

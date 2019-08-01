@@ -13,7 +13,4 @@ include('custom_scrollbar.js') */
 @@include('range_slider.js')
 // include('popups.js')
 // include('tooltip.js')
-
-
-
-@@include('slider.js')
+@@include('slick-slider.js')

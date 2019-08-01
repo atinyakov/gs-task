@@ -1,0 +1,25 @@
+.slick {
+    &-next {
+        right: 25px;
+
+        &:before {
+            color: black;
+        }
+    }
+
+    &-prev {
+        left: 25px;
+
+        &:before {
+            color: black;
+        }
+    }
+
+    &-slide {
+        img {
+            margin: 0 calc($gutter-step * 3 / 2) calc($gutter-step * 3 / 2);
+            max-width: none;
+            height: 320px;
+        }
+    }
+}

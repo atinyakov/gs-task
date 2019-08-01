@@ -1,5 +1,6 @@
 .form {
     background-color: #f5f5f5;
+    padding-top: 82px;
     
     &__btn {
         margin: 6px 58px;
@@ -8,23 +9,58 @@
     &__form {
         display: flex;
         flex-direction: column;
-        width: 633px;
+        width: 615px;
+        padding-right: 47px;
+        padding-left: 54px;
+
+        @media (--desktop-lg) {
+            padding: 10px 0 0 80px;
+            width: 508px;
+            padding-right: 22px;
+            padding-left: 41px;
+        }
+
+         @media (--desktop) {
+            width: 359px;
+            padding-right: 39px;
+            padding-left: 43px;
+        }
     }
 
     &__description {
         padding: 0px 56px;
         margin-bottom: 33px;
+        @media (--desktop-lg) {
+            margin-bottom: 0;
+        }
+
+        @media (--desktop) {
+            display: none;
+        }
+        
     }
 
     &__list {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        margin: 14px calc($gutter-step * 8) 0 calc($gutter-step * 7);
+        margin-top: 14px;
+
+        &--top {
+            @media (--desktop) {
+                flex-direction: column;
+            }
+
+            .form__list-item {
+                width: 100%;
+            }
+        }
 
         &-item {
-            width: 248px;
+            width: calc((100% - 16px)/2);
             height: 96px;
+
+
 
             input {
                 margin: 0;
@@ -37,6 +73,24 @@
         }
     }
 
+    &__checkbox {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 32px;
+
+        @media (--desktop) {
+            flex-direction: column
+        }
+
+        &-item {
+            flex-basis: 50%;
+
+            @media (--desktop) {
+                flex-basis: 100%;
+            }
+        }
+    }
+
     &__grid {
         display: flex;
         flex-wrap: wrap;
@@ -44,8 +98,15 @@
 
     &__header {
         font-size: 32px;
-        padding: 82px 165px 0;
+        text-align: center;
         margin-bottom: 47px;
 
+        @media (--desktop) {
+            margin-bottom: 19px;
+        }
+    }
+
+    &__textarea {
+        height: 88px;
     }
 }

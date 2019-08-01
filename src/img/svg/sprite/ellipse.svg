@@ -8,5 +8,5 @@
       }
     </style>
   </defs>
-  <circle class="cls-1" cx="31.5" cy="31.5" r="30"/>
+  <circle fill="none" stoke="#000"  stroke-width="3" class="cls-1" cx="31.5" cy="31.5" r="30"/>
 </svg>

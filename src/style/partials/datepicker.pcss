@@ -8,14 +8,14 @@
     z-index: 10 !important;
 
     .ui-datepicker-header {
-        background: $cl-blue;
+        background: #ffffff;
         height: $gutter;
         padding: 0;
         line-height: $gutter;
     }
 
         .ui-datepicker-title {
-            color: #fff;
+            color: #000000;
             line-height: $gutter;
         }
 
@@ -30,7 +30,7 @@
             cursor: pointer;
 
             span {
-                position: absolute 50% * * 50%;
+                position: absolute 50% * 50%;
                 border: solid transparent;
                 border-color: rgba(#fff, 0);
                 border-width: 6px;
@@ -47,7 +47,7 @@
             left: 0;
 
             span {
-                border-right-color: #fff;
+                border-right-color: #000;
             }
         }
 
@@ -55,7 +55,7 @@
             right: 0;
 
             span {
-                border-left-color: #fff;
+                border-left-color: #000;
             }
         }
 
@@ -81,6 +81,8 @@
         th {
             border-bottom: 1px solid $cl-grey;
             font-size: 12px;
+            background-color: #c4c9d0;
+            color: #fff;
         }
 
         td {
@@ -116,7 +118,7 @@
 
             &.ui-datepicker-week-end {
                 a {
-                    color: $cl-red;
+                    color: #000000;
 
                     &:hover {
                         color: #fff;

@@ -44,7 +44,7 @@ select {
     border-width: 1px;
     display: block;
     position: relative;
-    width: 82%;
+    width: 100%;
     margin: 0 auto 0;
     padding: 0;
     outline: none;
@@ -147,6 +147,7 @@ textarea {
 
 input[type="checkbox"],
 input[type="radio"] {
+    font-size: 14px;
     position: absolute;
     clip: rect(0,0,0,0);
 
@@ -194,8 +195,15 @@ input[type="radio"] {
     }
 
     &:checked {
+
+        & + label {
+            font-weight: bold;
+        }
+
+
         & + label:after {
             background: $cl-blue;
+
         }
 
         &:disabled + label:after {
