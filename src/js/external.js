@@ -18,4 +18,6 @@
 @@include('../../node_modules/jquery.inputmask/dist/jquery.inputmask.bundle.js')
 @@include('../../node_modules/select2/dist/js/select2.full.js')
 @@include('../../node_modules/fancybox/dist/js/jquery.fancybox.pack.js')
+@@include('../../node_modules/slick-carousel/slick/slick.js')
+
 // include('../../node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.js')

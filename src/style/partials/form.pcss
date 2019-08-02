@@ -2,8 +2,16 @@
     background-color: #f5f5f5;
     padding-top: 82px;
     
+    @media (--tablet-lg) {
+        padding-top: 39px;
+    }
+
     &__btn {
         margin: 6px 58px;
+
+        @media (--tablet-lg) {
+            margin: 71px 58px;
+        }
     }
     
     &__form {
@@ -24,6 +32,35 @@
             width: 359px;
             padding-right: 39px;
             padding-left: 43px;
+        }
+
+        @media (--tablet-lg) {
+            width: 100%;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        @media (--tablet) {
+            flex-direction: column;
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+
+        div {
+            width: 100%;
+            margin-top: 100px;
+
+
+            @media (--tablet-lg) {
+                margin: 0;
+                width: calc((100% - 16px)/2);
+            }
+
+            @media (--tablet) {
+                margin-top: 100px;
+                width: 100%;
+            }
         }
     }
 
@@ -46,13 +83,35 @@
         justify-content: space-between;
         margin-top: 14px;
 
+        &--inner {
+            @media (--tablet-lg) {
+                margin: 0;
+            }
+        }
+
+        @media (--tablet) {
+            flex-direction: column;
+        }
+
         &--top {
             @media (--desktop) {
                 flex-direction: column;
             }
 
+            @media (--tablet-lg) {
+                flex-direction: row;
+            }
+
             .form__list-item {
                 width: 100%;
+
+                @media (--tablet-lg) {
+                    width: calc((100% - 16px)/2);
+                }
+                @media (--tablet) {
+                    width: 100%;
+                }
+                
             }
         }
 
@@ -74,12 +133,22 @@
     }
 
     &__checkbox {
-        display: flex;
         flex-wrap: wrap;
         margin-top: 32px;
+        display: flex;
 
         @media (--desktop) {
+            display: flex;
             flex-direction: column
+        }
+
+        @media (--tablet-lg) {
+            flex-direction: row;
+            width: calc((100% - 16px)/2);
+        }
+
+        @media (--tablet) {
+            display: none;
         }
 
         &-item {

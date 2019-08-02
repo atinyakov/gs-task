@@ -8,19 +8,37 @@
     }
 
     
-     @media (--desktop) {
+    @media (--desktop) {
         padding-left: 27px;
+    }
+
+    @media (--tablet-lg) {
+        padding-left: 43px;
+    }
+
+    @media (--tablet) {
+        padding-left: 23px;
+        flex-direction: column;
     }
 
     &__address {
         padding-top: 43px;
         line-height: 1.5;
+
+        @media (--tablet) {
+            padding-top: 29px;
+        }
     }
 
     &__header {
         font-size: 40px;
         padding-top: 74px;
         margin: 0 auto;
+
+        @media (--tablet-lg) {
+            font-size: 1.5rem;
+            padding-top: 40px;
+        }   
     }
 
     &__phone {
@@ -40,9 +58,21 @@
 
 
         @media (--desktop) {
-            margin: 134px auto 0 31px;
+            margin: 134px auto 0 30px;
             width: 250px;
             height: 250px;
+        }
+
+        @media (--tablet-lg) {
+            margin: 100px auto 0 41px;
+            width: 282px;
+            height: 282px;
+        }
+
+        @media (--tablet) {
+            margin: 20px auto 0 0px;
+            width: 275px;
+            height: 276px;
         }
     }
 

@@ -13,7 +13,19 @@
             top: 120px;
             margin-bottom: 20px;
             width: 100%;
-            text-align: center
+            text-align: center;
+
+            @media (--tablet-lg) {
+                font-size: 59px;
+                top: 145px;
+            }
+
+
+            @media (--tablet-lg) {
+                font-size: 31px;
+                top: 114px;
+            }
+
         }
 
         &-description {
@@ -22,13 +34,27 @@
             bottom: 120px;
             font-size: 20px;
             width: 100%;
-            text-align: center
+            text-align: center;
+
+            @media (--tablet-lg) {
+                bottom: 130px;
+            }
+
+            @media (--tablet) {
+                bottom: 95px;
+                padding: 0 35px;
+                line-height: 1.3;
+            }
         }
     }
 
     &__descripton {
         &-wrapper {
             display: flex;
+
+            @media (--tablet-lg) {
+                flex-direction: column;
+            }
         }
     }
 }

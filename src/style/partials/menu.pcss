@@ -8,24 +8,39 @@
     left: calc(50% - $desktop-lg-size-min / 2);
     width: calc($desktop-lg-size-min);
 
+
+    @media (--desktop-lg) {
+        width: 1280px;
+    }
+
     @media (--desktop) {
         width: 1024px;
     }
 
     @media (--tablet-lg) {
-
+        width: 768px;
     }
 
-    @media (--mobile) {
-        display: block;
+
+    @media (--tablet) {
+        width: calc(100% - 16px);
     }
+    
 
     &__item {
+
+        @media (--tablet-lg) {
+            display: none;
+        }
+
         &--mobile {
             display: none;
 
-            @media (--mobile) {
+            @media (--tablet-lg) {
                 display: block;
+            }
+
+            @media (--mobile) {
             }
         }
     }
@@ -35,8 +50,10 @@
         justify-content: space-between;
         width: 1000px;
 
-        @media (--desktop) {
-            
+        @media (--tablet-lg) {
+            width: auto;
+            margin-left: 30px;
+            order: 2;
         }
 
         @media (--mobile) {
@@ -49,9 +66,20 @@
         justify-content: space-between;
         width: 100px;
 
-    
-        &--item {
+        @media (--tablet-lg) {
+            margin-left: auto;
+        }
+
+        @media (--tablet) {
+            width: auto;
+        }
+
+        &-item {
             display: block;
+
+            @media (--tablet) {
+                display: none;
+            }
 
             &--cart {
                 display: block;
